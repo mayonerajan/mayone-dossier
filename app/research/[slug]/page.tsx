@@ -2,7 +2,21 @@ import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-const abstractsDatabase: Record<string, { title: string; date: string; destinationUrl: string; body: string }> = {
+// 1. Define strict types for the database
+interface AbstractData {
+  title: string;
+  date: string;
+  destinationUrl: string;
+  body: string;
+}
+
+// Next.js 16 Page Props interface specifying params as a Promise
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+// 2. The Abstracts Database (Keys updated to fix 404 routing mismatches)
+const abstractsDatabase: Record<string, AbstractData> = {
   "algorithmic-lock-in": {
     title: "The Mechanics of Algorithmic Lock-In",
     date: "2026-05-29",
@@ -21,7 +35,7 @@ const abstractsDatabase: Record<string, { title: string; date: string; destinati
     destinationUrl: "https://www.mahastrategies.com/doctrine/briefs/soil-gut-brain-axis",
     body: "Cognitive processing speed and executive function are not purely software problems; they are fundamentally constrained by the biological hardware of the human organism. The Soil-Gut-Brain Axis Protocol examines the direct neurochemical pipeline from external nutrient inputs to high-level cognitive output. Industrialized, entropic food systems degrade the gut microbiome, which is responsible for synthesizing critical neurotransmitters like serotonin and dopamine. When this metabolic supply chain is compromised, the brain experiences thermodynamic friction, artificially lowering the threshold for cognitive fatigue. In this degraded state, the individual's defense mechanisms are weakened, leaving the prefrontal cortex highly susceptible to Algorithmic Capture. Securing Biological Sovereignty requires recognizing that the physical substrate—beginning at the microbial level of the soil and ending in the neurological network of the brain—must be fiercely protected from systemic degradation. By optimizing external nutrient inputs and repairing the gut-brain signaling pathways, an individual restores Thermodynamic Autonomy to their biological engine. This protocol dictates the strict curation of the metabolic supply chain, treating dietary input not merely as caloric sustenance, but as the foundational neuro-infrastructure required to execute The Maha Principle in high-noise environments."
   },
-  "neurotechnology-non-medical-outlook": {
+  "neurotechnology-commercial-outlook": { // KEY FIXED
     title: "Neurotechnology Commercial Outlook",
     date: "2026-06-01",
     destinationUrl: "https://www.mahastrategies.com/intelligence/briefs/neurotechnology-non-medical-outlook",
@@ -81,7 +95,7 @@ const abstractsDatabase: Record<string, { title: string; date: string; destinati
     destinationUrl: "https://www.mahastrategies.com/doctrine/briefs/strategic-gravity-and-environmental-manipulation",
     body: "Strategic gravity is the capacity of an individual or an organization to draw resources, opportunities, and insights toward themselves through the sheer weight of their focused execution. It is the direct opposite of a reactive, frantic existence. Achieving this state requires environmental manipulation—the deliberate restructuring of your immediate physical and digital architecture to aggressively eliminate cognitive friction. Relying on sheer willpower to maintain focus while remaining embedded in a hyper-stimulating environment is a structural failure. The platform interfaces that dominate modern life are weaponized to dismantle intent and force Algorithmic Capture upon the user. By redesigning the environment—removing distracting hardware, utilizing grayscale displays, enforcing strict physical boundaries between consumption and production, and isolating deep-work spaces—the operator creates an unshakeable defensive perimeter. This systematic curation of inputs protects the metabolic container, preserving the baseline neurochemical reserves necessary to maintain Biological Sovereignty. Enforcing this environmental design is a core tactical directive of The Maha Principle. By altering the physics of your immediate workspace, you secure Thermodynamic Autonomy, ensuring that your precious cognitive capital is preserved to build massive strategic gravity, rather than being fractured and bled out into a high-noise network."
   },
-  "the-ordeal-psychological-resilience-vectors": {
+  "the-ordeal": { // KEY FIXED
     title: "The Ordeal: Psychological Resilience Vectors",
     date: "2026-06-01",
     destinationUrl: "https://www.mahastrategies.com/doctrine/briefs/the-ordeal-psychological-resilience-vectors",
@@ -89,18 +103,17 @@ const abstractsDatabase: Record<string, { title: string; date: string; destinati
   },
 };
 
-// Next.js 16 Page Props interface specifying params as a Promise
-interface PageProps {
-  params: Promise<{ slug: string }>;
-}
-
+// 3. Dynamic Metadata Generation
 export async function generateMetadata({ params }: PageProps) {
   const resolvedParams = await params;
   const data = abstractsDatabase[resolvedParams.slug];
+  
   if (!data) return { title: 'Abstract Not Found' };
+  
   return { title: `${data.title} (Abstract) | Mayone Maha Rajan` };
 }
 
+// 4. Schema Mapping Engine
 function parseAndHyperlinkConcepts(text: string) {
   const mapping = [
     { text: "Biological Sovereignty", url: "/concepts/biological-sovereignty" },
@@ -127,7 +140,11 @@ function parseAndHyperlinkConcepts(text: string) {
       splitText.forEach((subtext, index) => {
         if (subtext === concept.text) {
           newParts.push(
-            <Link key={concept.text + index} href={concept.url} className="text-indigo-400 hover:underline font-medium decoration-indigo-500/50">
+            <Link 
+              key={`${concept.text}-${index}`} 
+              href={concept.url} 
+              className="text-indigo-400 hover:underline font-medium decoration-indigo-500/50"
+            >
               {subtext}
             </Link>
           );
@@ -142,7 +159,7 @@ function parseAndHyperlinkConcepts(text: string) {
   return parts;
 }
 
-// Component transformed to async to handle awaited params in Next.js 16
+// 5. Main Component Renderer (Next.js 16 Async)
 export default async function ResearchAbstractRenderer({ params }: PageProps) {
   const resolvedParams = await params;
   const data = abstractsDatabase[resolvedParams.slug];
@@ -164,17 +181,26 @@ export default async function ResearchAbstractRenderer({ params }: PageProps) {
 
   return (
     <div className="max-w-2xl w-full mx-auto space-y-12 selection:bg-gray-700 pb-16 pt-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} 
+      />
 
       <nav className="font-mono text-xs text-gray-500 tracking-widest uppercase mb-8 flex gap-2">
-        <Link href="/research" className="hover:text-indigo-400 transition-colors">INDEX</Link>
+        <Link href="/research" className="hover:text-indigo-400 transition-colors">
+          INDEX
+        </Link>
         <span>/</span>
         <span className="text-gray-400">NODE DISPATCH</span>
       </nav>
 
       <header className="space-y-4 border-b border-gray-800 pb-6">
-        <div className="font-mono text-xs text-indigo-500 font-semibold">[ COMPILED BRIEF: {data.date} ]</div>
-        <h1 className="font-sans text-3xl sm:text-4xl font-bold text-white leading-tight">{data.title}</h1>
+        <div className="font-mono text-xs text-indigo-500 font-semibold">
+          [ COMPILED BRIEF: {data.date} ]
+        </div>
+        <h1 className="font-sans text-3xl sm:text-4xl font-bold text-white leading-tight">
+          {data.title}
+        </h1>
       </header>
 
       <article className="font-serif text-lg leading-relaxed text-gray-300 space-y-6">
@@ -182,9 +208,18 @@ export default async function ResearchAbstractRenderer({ params }: PageProps) {
       </article>
 
       <div className="bg-gray-900/40 p-6 rounded border border-gray-800 space-y-4 mt-8">
-        <h4 className="font-sans text-sm font-bold uppercase tracking-wider text-white">[ Institutional Document Connection ]</h4>
-        <p className="font-serif text-sm text-gray-400">The underlying technical engineering, market analytics, and procedural guidelines are isolated on the firm surface network.</p>
-        <a href={data.destinationUrl} target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-black text-xs font-mono font-bold px-4 py-2 hover:bg-gray-200 transition-colors uppercase tracking-tight">
+        <h4 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
+          [ Institutional Document Connection ]
+        </h4>
+        <p className="font-serif text-sm text-gray-400">
+          The underlying technical engineering, market analytics, and procedural guidelines are isolated on the firm surface network.
+        </p>
+        <a 
+          href={data.destinationUrl} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="inline-block bg-white text-black text-xs font-mono font-bold px-4 py-2 hover:bg-gray-200 transition-colors uppercase tracking-tight"
+        >
           Read Full Document at Maha Strategies &#8599;
         </a>
       </div>
