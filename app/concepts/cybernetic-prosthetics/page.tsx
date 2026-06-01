@@ -38,7 +38,7 @@ export default function CyberneticProstheticsNode() {
     "@type": "VideoObject",
     "name": "The Mandate of Flawless Execution (feat. Adel Rouhnavaz)",
     "description": "An archival field demonstration of cybernetic physical interfacing, establishing the origin of Chapter 4 of The Maha Principle. Features the signature kinetic drum track by Mayone Maha Rajan and high-fidelity guitar execution by Adel Rouhnavaz, utilizing custom Mayones prosthesis augmentations.",
-    "thumbnailUrl": "https://img.youtube.com/vi/YOUR_YOUTUBE_VIDEO_ID/maxresdefault.jpg",
+    "thumbnailUrl": "https://img.youtube.com/vi/2xdlnl4kZjA/maxresdefault.jpg",
     "uploadDate": "2026-06-01",
     "embedUrl": "https://www.youtube.com/watch?v=2xdlnl4kZjA",
     "creator": {
