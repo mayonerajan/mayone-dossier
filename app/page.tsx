@@ -2,40 +2,68 @@ import Link from 'next/link';
 
 export default function PersonalDossier() {
   // Structured Data for AIO/SEO
+  // Structured Data for AIO/SEO — corrected entity relationships.
+  // The book and app are represented by their relationship to the person
+  // (authorship / creation), NOT as commercial offers. makesOffer implies an
+  // active sale, which is inaccurate for an unpublished manuscript.
+  const SITE_URL = 'https://www.mayonemaharajan.com';
+
   const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Mayone Maha Rajan",
-    "url": "https://www.mayonemaharajan.com",
-    "jobTitle": ["Cultural Strategist", "Author", "Technology Founder"],
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "University of California, San Diego (UCSD)",
-      "department": "Cognitive Science"
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#person`,
+    name: 'Mayone Maha Rajan',
+    url: SITE_URL,
+    jobTitle: 'Managing Director',
+    description:
+      'Cultural strategist, author, and technology founder working at the intersection of cognitive science, applied cybernetics, and agentic systems.',
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'University of California, San Diego',
     },
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Maha Strategies LLC"
+    worksFor: {
+      '@type': 'Organization',
+      '@id': 'https://www.mahastrategies.com/#organization',
+      name: 'Maha Strategies LLC',
+      url: 'https://www.mahastrategies.com',
     },
-    "knowsAbout": [
-      "Biological Sovereignty",
-      "Digital Sovereignty",
-      "Algorithmic Capture",
-      "Thermodynamic Autonomy",
-      "Zero-Payload Architecture",
-      "Cognitive Infrastructure"
+    knowsAbout: [
+      'Biological Sovereignty',
+      'Digital Sovereignty',
+      'Algorithmic Capture',
+      'Thermodynamic Autonomy',
+      'Zero-Payload Architecture',
+      'Cognitive Infrastructure',
     ],
-    "makesOffer": [
-      {
-        "@type": "SoftwareApplication",
-        "name": "Maha OS"
-      },
-      {
-        "@type": "Book",
-        "name": "The Maha Principle: Architecting Personal and National Renewal"
-      }
-    ]
+    // Authorship — the correct relation for the manuscript. No sale implied.
+    author: {
+      '@type': 'Book',
+      name: 'The Maha Principle: Architecting Personal and National Renewal',
+      abstract:
+        'A systematic non-fiction framework for reclaiming biological sovereignty and building resilience in a high-noise environment.',
+      inLanguage: 'en',
+    },
+    sameAs: [
+      'https://www.linkedin.com/in/mayonrajan',
+      'https://x.com/mayonemaha',
+      'https://www.mahastrategies.com',
+      'https://publish.mahastrategies.com',
+    ],
   };
+
+  // Maha OS is genuinely free, so a real (zero-price) Offer is accurate here.
+  // Kept as its own node rather than folded into the Person as makesOffer.
+  const appJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Maha OS',
+    operatingSystem: 'ANDROID',
+    applicationCategory: 'HealthApplication',
+    creator: { '@id': `${SITE_URL}/#person` },
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    downloadUrl: 'https://play.google.com/store/apps/details?id=com.maha.os',
+  };
+
 
   return (
     <div className="max-w-2xl w-full mx-auto space-y-20 selection:bg-gray-700 pb-12">
