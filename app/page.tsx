@@ -105,7 +105,7 @@ export default function PersonalDossier() {
         </div>
       </section>
 
-      {/* NEW: CORE CONCEPTS LIBRARY (Highest ROI) */}
+      {/* CORE CONCEPTS LIBRARY */}
       <section className="space-y-4 bg-gray-900/30 p-6 rounded-lg border border-gray-800">
         <h2 className="font-sans text-sm font-semibold tracking-widest uppercase text-white border-l-2 border-indigo-500 pl-4">
           IV. Concepts Library
@@ -179,7 +179,7 @@ export default function PersonalDossier() {
         </div>
       </section>
 
-      {/* NEW: CONVERSION PROTOCOL */}
+      {/* CONVERSION PROTOCOL */}
       <section className="space-y-4 pb-8">
         <h2 className="font-sans text-sm font-semibold tracking-widest uppercase text-white border-l-2 border-green-500 pl-4">
           VI. Action Protocol
@@ -200,12 +200,12 @@ export default function PersonalDossier() {
              </button>
           </form>
           <div className="pt-2 flex gap-4">
-            <Link href="/manifesto" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">
+            <a href="https://www.mahastrategies.com/manifesto" target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">
               [ READ MANIFESTO ]
-            </Link>
-            <Link href="/start-here" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">
+            </a>
+            <a href="https://www.mahastrategies.com/start" target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">
               [ START HERE ]
-            </Link>
+            </a>
           </div>
         </div>
       </section>

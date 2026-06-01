@@ -14,25 +14,26 @@ const geistMono = Geist_Mono({
 
 const SITE_URL = "https://www.mayonemaharajan.com";
 
+// Sitewide SEO and AIO Baseline
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Mayone Maha Rajan | Managing Director, Maha Strategies",
+  title: "Mayone Maha Rajan | Cognitive Science, Digital Sovereignty & The Maha Principle",
   description:
-    "Cultural strategist, author, and technology founder. Architecting personal and national renewal through applied cognitive science and edge-compute intelligence.",
+    "Personal dossier of Mayone Maha Rajan. Cultural strategist, author, and technology founder architecting structural countermeasures against algorithmic capture.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "profile",
     url: SITE_URL,
-    title: "Mayone Maha Rajan | Managing Director, Maha Strategies",
+    title: "Mayone Maha Rajan | Cognitive Science & Digital Sovereignty",
     description:
-      "Cultural strategist, author, and technology founder. Founder of Maha Strategies and author of The Maha Principle.",
+      "Architecting frameworks for personal and national renewal at the intersection of cognitive science and agentic systems.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Mayone Maha Rajan" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mayone Maha Rajan | Managing Director, Maha Strategies",
+    title: "Mayone Maha Rajan | Cognitive Science & Digital Sovereignty",
     description:
-      "Cultural strategist, author, and technology founder. Founder of Maha Strategies and author of The Maha Principle.",
+      "Architecting frameworks for personal and national renewal at the intersection of cognitive science and agentic systems.",
     images: ["/og-image.jpg"],
     creator: "@mayonemaha",
   },
@@ -43,8 +44,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Person schema — the entity record search engines and AI engines read to
-  // establish who you are. Keep every fact here truthful and corroborable.
+  // Person schema — High-density structured data for AI parsing.
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -55,7 +55,8 @@ export default function RootLayout({
       "Cultural strategist, author, and technology founder working at the intersection of cognitive science, applied cybernetics, and agentic systems.",
     alumniOf: {
       "@type": "CollegeOrUniversity",
-      name: "University of California, San Diego",
+      name: "University of California, San Diego (UCSD)",
+      department: "Cognitive Science"
     },
     worksFor: {
       "@type": "Organization",
@@ -65,23 +66,29 @@ export default function RootLayout({
     },
     knowsAbout: [
       "Cognitive Science",
-      "Edge Computing",
-      "On-Device AI",
-      "Digital Privacy",
+      "Biological Sovereignty",
+      "Digital Sovereignty",
+      "Algorithmic Capture",
+      "Thermodynamic Autonomy",
+      "Zero-Payload Architecture",
+      "Cognitive Infrastructure"
     ],
     url: SITE_URL,
-    // sameAs disambiguates you from others with the same name and merges your
-    // web presence into one entity.
     sameAs: [
       "https://www.linkedin.com/in/mayonrajan",
       "https://x.com/mayonemaha",
       "https://www.mahastrategies.com",
       "https://publish.mahastrategies.com",
     ],
+    makesOffer: [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Maha OS"
+      }
+    ]
   };
 
-  // Marks you as the author of the manuscript, strengthening the
-  // person <-> work relationship for entity graphs.
+  // Book schema — Strengthens the entity-work relationship.
   const bookSchema = {
     "@context": "https://schema.org",
     "@type": "Book",
