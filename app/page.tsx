@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function PersonalDossier() {
   return (
     <div className="max-w-2xl w-full mx-auto space-y-20 selection:bg-gray-700">
-      
+
       {/* HEADER / IDENTITY */}
       <header className="space-y-6">
         <div className="font-mono text-xs text-gray-500 tracking-widest uppercase border-b border-gray-800 pb-4">
@@ -38,9 +38,9 @@ export default function PersonalDossier() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
             <a href="https://www.mahastrategies.com" target="_blank" rel="noopener noreferrer" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center">
-              ACCESS MAHA STRATEGIES ↗
+              ACCESS MAHA STRATEGIES &#8599;
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.mahastrategies.os" target="_blank" rel="noopener noreferrer" className="inline-block px-4 py-2 bg-white text-black font-bold hover:bg-gray-200 text-sm font-mono transition-colors text-center">
+            <a href="https://play.google.com/store/apps/details?id=com.maha.os" target="_blank" rel="noopener noreferrer" className="inline-block px-4 py-2 bg-white text-black font-bold hover:bg-gray-200 text-sm font-mono transition-colors text-center">
               DOWNLOAD MAHA OS
             </a>
           </div>
@@ -58,20 +58,62 @@ export default function PersonalDossier() {
           </p>
           <div className="pt-2">
             <a href="https://publish.mahastrategies.com" target="_blank" rel="noopener noreferrer" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center">
-              PUBLISHING NODE ↗
+              PUBLISHING NODE &#8599;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* THE RECORD / SELECTED WRITING */}
+      <section className="space-y-4">
+        <h2 className="font-sans text-sm font-semibold tracking-widest uppercase text-white border-l-2 border-indigo-500 pl-4">
+          IV. Selected Writing
+        </h2>
+        <div className="pl-4 border-l-2 border-transparent space-y-6">
+          <p className="font-serif text-lg leading-relaxed text-gray-400">
+            Essays and architectural analyses on edge computing, on-device AI, and biometric privacy.
+          </p>
+          <ul className="space-y-4">
+            <li>
+              <a href="https://www.maha-os.com/blog/biological-digital-sovereignty-defined" target="_blank" rel="noopener noreferrer" className="group block">
+                <span className="font-sans text-base text-gray-200 group-hover:text-indigo-400 transition-colors">What is Digital and Biological Sovereignty?</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.maha-os.com/blog/local-ai-vs-cloud-biometrics" target="_blank" rel="noopener noreferrer" className="group block">
+                <span className="font-sans text-base text-gray-200 group-hover:text-indigo-400 transition-colors">Local AI vs. Cloud AI: The Battle for Biometric Privacy</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.maha-os.com/blog/cloud-health-telemetry-risks" target="_blank" rel="noopener noreferrer" className="group block">
+                <span className="font-sans text-base text-gray-200 group-hover:text-indigo-400 transition-colors">The Silent Leak: Why Cloud Health Telemetry is a Liability</span>
+              </a>
+            </li>
+          </ul>
+          <div className="pt-2">
+            <a href="https://www.maha-os.com/blog" target="_blank" rel="noopener noreferrer" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center">
+              ALL WRITING &#8599;
             </a>
           </div>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="pt-12 pb-8 border-t border-gray-800">
+      <footer className="pt-12 pb-8 border-t border-gray-800 space-y-4">
+        <div className="flex gap-4 font-mono text-xs">
+          <a href="https://www.linkedin.com/in/mayonrajan" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-400 transition-colors">
+            LINKEDIN &#8599;
+          </a>
+          <a href="https://x.com/mayonemaha" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-400 transition-colors">
+            X / TWITTER &#8599;
+          </a>
+        </div>
         <div className="font-mono text-xs text-gray-600 flex justify-between">
-          <span>© {new Date().getFullYear()} Mayone Maha Rajan</span>
+          <span>&copy; {new Date().getFullYear()} Mayone Maha Rajan</span>
           <span>LOCATION: COLOMBO, SL // WYOMING, USA</span>
         </div>
       </footer>
 
     </div>
   );
-} 
+}
