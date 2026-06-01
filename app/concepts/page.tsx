@@ -12,7 +12,8 @@ export default function ConceptsIndex() {
     { title: "Algorithmic Capture", slug: "algorithmic-capture", desc: "The systemic hijacking of human executive function by machine learning." },
     { title: "Thermodynamic Autonomy", slug: "thermodynamic-autonomy", desc: "Self-sustaining energy and computing operations independent of entropic decay." },
     { title: "Zero-Payload Architecture", slug: "zero-payload-architecture", desc: "Software doctrine ensuring zero non-essential telemetry to the cloud." },
-    { title: "The Maha Principle", slug: "the-maha-principle", desc: "Unified methodology for reclaiming individual agency." }
+    { title: "The Maha Principle", slug: "the-maha-principle", desc: "Unified methodology for reclaiming individual agency." },
+    { title: "Cybernetic Prosthetics", slug: "cybernetic-prosthetics", desc: "Analyzing high-performance physical instruments as cybernetic extensions of the human nervous system." }
   ];
 
   return (
