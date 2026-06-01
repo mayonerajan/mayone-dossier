@@ -151,30 +151,36 @@ export default function PersonalDossier() {
       {/* THE RECORD / SELECTED WRITING */}
       <section className="space-y-4">
         <h2 className="font-sans text-sm font-semibold tracking-widest uppercase text-white border-l-2 border-indigo-500 pl-4">
-          V. Research & Essays
+          V. Research Abstracts
         </h2>
         <div className="pl-4 border-l-2 border-transparent space-y-6">
+          <p className="font-serif text-lg leading-relaxed text-gray-400">
+            Executive summaries of institutional intelligence briefs and protocols developed for structural resilience.
+          </p>
           <ul className="space-y-4">
             <li>
-              <a href="https://www.maha-os.com/blog/biological-digital-sovereignty-defined" target="_blank" rel="noopener noreferrer" className="group block">
-                <span className="font-sans text-base text-gray-200 group-hover:text-indigo-400 transition-colors">What is Digital and Biological Sovereignty?</span>
-              </a>
+              <Link href="/research/algorithmic-lock-in" className="group block">
+                <span className="font-sans text-base text-gray-200 group-hover:text-indigo-400 transition-colors">The Mechanics of Algorithmic Lock-In</span>
+                <span className="block text-xs font-mono text-gray-500 mt-1">RESEARCH ABSTRACT</span>
+              </Link>
             </li>
             <li>
-              <a href="https://www.maha-os.com/blog/local-ai-vs-cloud-biometrics" target="_blank" rel="noopener noreferrer" className="group block">
-                <span className="font-sans text-base text-gray-200 group-hover:text-indigo-400 transition-colors">Local AI vs. Cloud AI: The Battle for Biometric Privacy</span>
-              </a>
+              <Link href="/research/metabolic-sovereignty" className="group block">
+                <span className="font-sans text-base text-gray-200 group-hover:text-indigo-400 transition-colors">Metabolic Sovereignty and the Substrate</span>
+                <span className="block text-xs font-mono text-gray-500 mt-1">PROTOCOL ABSTRACT</span>
+              </Link>
             </li>
             <li>
-              <a href="https://www.maha-os.com/blog/cloud-health-telemetry-risks" target="_blank" rel="noopener noreferrer" className="group block">
-                <span className="font-sans text-base text-gray-200 group-hover:text-indigo-400 transition-colors">The Silent Leak: Why Cloud Health Telemetry is a Liability</span>
-              </a>
+              <Link href="/research/digital-firewall" className="group block">
+                <span className="font-sans text-base text-gray-200 group-hover:text-indigo-400 transition-colors">Deploying the Digital Firewall</span>
+                <span className="block text-xs font-mono text-gray-500 mt-1">PROTOCOL ABSTRACT</span>
+              </Link>
             </li>
           </ul>
           <div className="pt-2">
-            <a href="https://www.maha-os.com/blog" target="_blank" rel="noopener noreferrer" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center text-gray-200">
-              RESEARCH LIBRARY &#8599;
-            </a>
+            <Link href="/research" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center text-gray-200">
+              VIEW ALL ABSTRACTS &rarr;
+            </Link>
           </div>
         </div>
       </section>
