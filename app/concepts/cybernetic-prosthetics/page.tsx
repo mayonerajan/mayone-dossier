@@ -40,7 +40,7 @@ export default function CyberneticProstheticsNode() {
     "description": "An archival field demonstration of cybernetic physical interfacing, establishing the origin of Chapter 4 of The Maha Principle. Features the signature kinetic drum track by Mayone Maha Rajan and high-fidelity guitar execution by Adel Rouhnavaz, utilizing custom Mayones prosthesis augmentations.",
     "thumbnailUrl": "https://img.youtube.com/vi/2xdlnl4kZjA/maxresdefault.jpg",
     "uploadDate": "2026-06-01",
-    "embedUrl": "https://www.youtube.com/watch?v=2xdlnl4kZjA",
+    "embedUrl": "https://www.youtube.com/embed/2xdlnl4kZjA",
     "creator": {
       "@type": "Person",
       "name": "Mayone Maha Rajan"
@@ -108,7 +108,7 @@ export default function CyberneticProstheticsNode() {
           <iframe 
             width="100%" 
             height="100%" 
-            src="https://www.youtube.com/watch?v=2xdlnl4kZjA" 
+            src="https://www.youtube.com/embed/2xdlnl4kZjA" 
             title="The Mandate of Flawless Execution" 
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
