@@ -54,7 +54,7 @@ export default function PersonalDossier() {
         </h2>
         <div className="pl-4 border-l-2 border-transparent space-y-4">
           <p className="font-serif text-lg leading-relaxed text-gray-400">
-            The operational framework for this philosophy is formalized in my 95,000-word non-fiction manuscript, <strong>The Maha Principle: Architecting Personal and National Renewal</strong>. It is a rigid, systematic approach to reclaiming the metabolic container and architecting resilience in a high-noise, low-signal environment.
+            The operational framework for this philosophy is formalized in my 80,000-word non-fiction manuscript, <strong>The Maha Principle: Architecting Personal and National Renewal</strong>. It is a rigid, systematic approach to reclaiming the metabolic container and architecting resilience in a high-noise, low-signal environment.
           </p>
           <div className="pt-2">
             <a href="https://publish.mahastrategies.com" target="_blank" rel="noopener noreferrer" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center">
