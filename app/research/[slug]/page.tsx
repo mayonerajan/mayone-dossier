@@ -16,7 +16,7 @@ const abstractsDatabase: Record<string, { title: string; date: string; destinati
     destinationUrl: "https://www.mahastrategies.com/protocols/metabolic-sovereignty",
     body: "Securing the bodily container is the initial tactical move in any environment experiencing extreme cognitive noise. This protocol details the boundaries of Metabolic Sovereignty, forcing data collectors away from the perimeter of human biology. By utilizing local models and strictly processing on hardware components that you completely own, the user constructs an initial layer of defense protecting physiological integrity from continuous cloud synchronization."
   }
-  // Remaining slugs from the sitemap can easily be added to this database object
+  // Add remaining slugs from your sitemap here
 };
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
@@ -27,62 +27,68 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 // Helper utility to turn flat strings into rich cluster elements
 function parseAndHyperlinkConcepts(text: string) {
-    const mapping = [
-      { text: "Biological Sovereignty", url: "/concepts/biological-sovereignty" },
-      { text: "Digital Sovereignty", url: "/concepts/digital-sovereignty" },
-      { text: "Algorithmic Capture", url: "/concepts/algorithmic-capture" },
-      { text: "Thermodynamic Autonomy", url: "/concepts/thermodynamic-autonomy" },
-      { text: "Zero-Payload Architecture", url: "/concepts/zero-payload-architecture" },
-      { text: "The Maha Principle", url: "/concepts/the-maha-principle" },
-    ];
-  
-    // Changed JSX.Element to React.ReactNode
-    let parts: (string | React.ReactNode)[] = [text];
-  
-    mapping.forEach((concept) => {
-      const newParts: (string | React.ReactNode)[] = [];
-      parts.forEach((part) => {
-        if (typeof part !== 'string') {
-          newParts.push(part);
-          return;
+  const mapping = [
+    { text: "Biological Sovereignty", url: "/concepts/biological-sovereignty" },
+    { text: "Digital Sovereignty", url: "/concepts/digital-sovereignty" },
+    { text: "Algorithmic Capture", url: "/concepts/algorithmic-capture" },
+    { text: "Thermodynamic Autonomy", url: "/concepts/thermodynamic-autonomy" },
+    { text: "Zero-Payload Architecture", url: "/concepts/zero-payload-architecture" },
+    { text: "The Maha Principle", url: "/concepts/the-maha-principle" },
+  ];
+
+  let parts: (string | React.ReactNode)[] = [text];
+
+  mapping.forEach((concept) => {
+    const newParts: (string | React.ReactNode)[] = [];
+    parts.forEach((part) => {
+      if (typeof part !== 'string') {
+        newParts.push(part);
+        return;
+      }
+
+      const regex = new RegExp(`(${concept.text})`, 'g');
+      const splitText = part.split(regex);
+      
+      splitText.forEach((subtext, index) => {
+        if (subtext === concept.text) {
+          newParts.push(
+            <Link key={concept.text + index} href={concept.url} className="text-indigo-400 hover:underline font-medium decoration-indigo-500/50">
+              {subtext}
+            </Link>
+          );
+        } else if (subtext !== "") {
+          newParts.push(subtext);
         }
-  
-        const regex = new RegExp(`(${concept.text})`, 'g');
-        const splitText = part.split(regex);
-        
-        splitText.forEach((subtext, index) => {
-          if (subtext === concept.text) {
-            newParts.push(
-              <Link key={concept.text + index} href={concept.url} className="text-indigo-400 hover:underline font-medium decoration-indigo-500/50">
-                {subtext}
-              </Link>
-            );
-          } else if (subtext !== "") {
-            newParts.push(subtext);
-          }
-        });
       });
-      parts = newParts;
     });
-  
-    return parts;
-  }
+    parts = newParts;
+  });
+
+  return parts;
+}
 
 export default function ResearchAbstractRenderer({ params }: { params: { slug: string } }) {
   const data = abstractsDatabase[params.slug];
   if (!data) return notFound();
 
-  const abstractSchema = {
+  // AUDIT FIX: Explicitly setting @type to Article and adding abstract property
+  const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Abstract",
-    "headline": `Abstract: ${data.title}`,
+    "@type": "Article",
+    "headline": data.title,
+    "author": {
+      "@type": "Person",
+      "name": "Mayone Maha Rajan",
+      "url": "https://www.mayonemaharajan.com"
+    },
     "datePublished": data.date,
-    "author": { "@type": "Person", "name": "Mayone Maha Rajan", "url": "https://www.mayonemaharajan.com" }
+    "abstract": data.body
   };
 
   return (
     <div className="max-w-2xl w-full mx-auto space-y-12 selection:bg-gray-700 pb-16 pt-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(abstractSchema) }} />
+      {/* INJECT ARTICLE SCHEMA */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
       <nav className="font-mono text-xs text-gray-500 tracking-widest uppercase mb-8 flex gap-2">
         <Link href="/research" className="hover:text-indigo-400 transition-colors">INDEX</Link>
