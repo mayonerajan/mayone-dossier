@@ -216,6 +216,29 @@ export default function PersonalDossier() {
           </div>
         </div>
       </section>
+            {/* KINETIC ARCHIVES / FIELD DEMONSTRATIONS */}
+            <section className="space-y-4">
+        <h2 className="font-sans text-sm font-semibold tracking-widest uppercase text-white border-l-2 border-indigo-500 pl-4">
+          VI. Kinetic Archives
+        </h2>
+        <div className="pl-4 border-l-2 border-transparent space-y-6">
+          <p className="font-serif text-lg leading-relaxed text-gray-400">
+            Declassified audio-visual field demonstrations establishing the physical and kinetic origin points of The Maha Principle.
+          </p>
+          
+          <Link 
+            href="/archive" 
+            className="block p-6 border border-gray-800 bg-gray-900/30 rounded-lg hover:border-indigo-500 transition-all group"
+          >
+            <h3 className="font-sans text-xl font-bold text-white group-hover:text-indigo-400 mb-2 transition-colors">
+              Access the Vault &rarr;
+            </h3>
+            <p className="font-serif text-sm text-gray-400">
+              View archival footage of Thermodynamic Autonomy and Strategic Gravity in practice.
+            </p>
+          </Link>
+        </div>
+      </section>
 
       {/* CONVERSION PROTOCOL */}
       <section className="space-y-4 pb-8">
