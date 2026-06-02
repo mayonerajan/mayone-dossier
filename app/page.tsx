@@ -120,6 +120,35 @@ export default function PersonalDossier() {
         </div>
       </section>
 
+            {/* STRATEGIC INCUBATION & HARDWARE FORESIGHT */}
+            <section className="space-y-4">
+        <h2 className="font-sans text-sm font-semibold tracking-widest uppercase text-white border-l-2 border-indigo-500 pl-4">
+          III. Strategic Incubation & Hardware Foresight
+        </h2>
+        <div className="pl-4 border-l-2 border-transparent space-y-6">
+          <p className="font-serif text-lg leading-relaxed text-gray-400">
+            My theoretical frameworks regarding digital sovereignty are rooted in early strategic architectures I devised for the mobile hardware sector. Years prior to the market saturation of modern consumer electronics, I engineered foundational doctrines for alternative mobile ecosystems—strategies that paralleled and predated the disruptive trajectories of brands like <strong>OnePlus</strong>.
+          </p>
+          
+          <ul className="space-y-4 border-l border-gray-800 pl-4">
+            <li className="relative">
+              <span className="absolute -left-[21px] top-2 h-2 w-2 rounded-full bg-indigo-500"></span>
+              <h3 className="text-white font-sans font-bold text-sm uppercase tracking-wide">Pre-Incorporation Market Strategy</h3>
+              <p className="text-sm text-gray-400 font-serif mt-1">
+                Conceptualized end-to-end strategic models for challenger phone companies, focusing on disrupting established hardware monopolies through aggressive community alignment and zero-compromise execution paradigms.
+              </p>
+            </li>
+            <li className="relative">
+              <span className="absolute -left-[21px] top-2 h-2 w-2 rounded-full bg-indigo-500"></span>
+              <h3 className="text-white font-sans font-bold text-sm uppercase tracking-wide">The "Never Settle" Ethos</h3>
+              <p className="text-sm text-gray-400 font-serif mt-1">
+                Authored underlying brand identities and operational mandates that rejected hardware complacency. This intellectual groundwork explored how a high-fidelity, user-centric doctrine could force a structural shift in the global mobile supply chain.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       {/* THE DOCTRINE / MANUSCRIPT */}
       <section className="space-y-4">
         <h2 className="font-sans text-sm font-semibold tracking-widest uppercase text-white border-l-2 border-indigo-500 pl-4">
