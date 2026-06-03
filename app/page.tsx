@@ -279,6 +279,7 @@ export default function PersonalDossier() {
                 <span className="block text-xs font-mono text-gray-500 mt-1">PROTOCOL ABSTRACT</span>
               </Link>
             </li>
+            </ul>
                       {/* ASTRIAN TREK NODE */}
           <Link href="/concepts/astrian-trek" className="block p-6 border border-gray-800 rounded-lg hover:border-indigo-500 transition-all group">
             <div className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">// Biomechanics</div>
@@ -289,7 +290,17 @@ export default function PersonalDossier() {
               Mapping the trajectory from biological rhythmic collaboration to total human-machine integration via Tramaine and Mayones hardware.
             </p>
           </Link>
-          </ul>
+                    {/* EARTHISTS NODE */}
+                    <Link href="/concepts/earthists-footprints" className="block p-6 border border-gray-800 rounded-lg hover:border-indigo-500 transition-all group">
+            <div className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">// Structural Syncopation</div>
+            <h3 className="font-sans text-lg font-bold text-white group-hover:text-indigo-400 mb-2 transition-colors">
+              The Djent Paradigm &rarr;
+            </h3>
+            <p className="font-serif text-sm text-gray-400">
+              An architectural analysis of polyrhythmic complexity, biological sovereignty, and engineering the metabolic baseline for Earthists.
+            </p>
+          </Link>
+          
           <div className="pt-2">
             <Link href="/research" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center text-gray-200">
               VIEW ALL ABSTRACTS &rarr;
