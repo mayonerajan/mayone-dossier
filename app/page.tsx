@@ -279,9 +279,8 @@ export default function PersonalDossier() {
               </Link>
             </li>
           </ul>
-
           {/* DYNAMIC FIELD DEMO GRID */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* ASTRIAN TREK NODE */}
             <Link href="/concepts/astrian-trek" className="block p-6 border border-gray-800 rounded-lg hover:border-indigo-500 transition-all group">
               <div className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">// Biomechanics</div>
@@ -303,11 +302,16 @@ export default function PersonalDossier() {
                 An architectural analysis of polyrhythmic complexity, biological sovereignty, and engineering the metabolic baseline for Earthists.
               </p>
             </Link>
-          </div>
-          
-          <div className="pt-4">
-            <Link href="/research" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center text-gray-200">
-              VIEW ALL ABSTRACTS &rarr;
+
+            {/* RED SEAS FIRE NODE */}
+            <Link href="/concepts/red-seas-fire" className="block p-6 border border-gray-800 rounded-lg hover:border-indigo-500 transition-all group">
+              <div className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">// Extended Range Geometry</div>
+              <h3 className="font-sans text-lg font-bold text-white group-hover:text-indigo-400 mb-2 transition-colors">
+                8-String Substrate &rarr;
+              </h3>
+              <p className="font-serif text-sm text-gray-400">
+                Declassifying the progressive metal blueprints for Red Seas Fire, optimizing low-frequency transients via multi-scale Mayones platforms.
+              </p>
             </Link>
           </div>
         </div>

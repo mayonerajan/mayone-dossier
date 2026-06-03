@@ -15,7 +15,8 @@ export default function ConceptsIndex() {
     { title: "The Maha Principle", slug: "the-maha-principle", desc: "Unified methodology for reclaiming individual agency." },
     { title: "Cybernetic Prosthetics", slug: "cybernetic-prosthetics", desc: "Analyzing high-performance physical instruments as cybernetic extensions of the human nervous system." },
     { title: "Biomechanical Synthesis", slug: "astrian-trek", desc: "Mapping the trajectory from localized kinetic collaboration to the orchestration of complex, distributed biological and hardware ecosystems." },
-    { title: "Structural Syncopation", slug: "earthists-footprints", desc: "An architectural analysis of polyrhythmic complexity, biological sovereignty, and engineering the metabolic baseline for Earthists." }
+    { title: "Structural Syncopation", slug: "earthists-footprints", desc: "An architectural analysis of polyrhythmic complexity, biological sovereignty, and engineering the metabolic baseline for Earthists." },
+    { title: "Extended Range Geometry", slug: "red-seas-fire", desc: "Optimizing low-frequency transient tracking and structural transitions via multi-scale 8-string hardware arrays." }
   ];
 
   return (
