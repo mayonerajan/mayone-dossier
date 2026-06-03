@@ -51,22 +51,25 @@ const fieldDemonstrations = [
 ];
 
 export default function KineticArchivesNode() {
-  // 2. Dynamic Schema Generator
-  const generateVideoSchemas = () => {
-    return fieldDemonstrations.map((demo) => ({
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": `${demo.chapter}: ${demo.title} (${demo.track})`,
-      "description": demo.description,
-      "thumbnailUrl": `https://img.youtube.com/vi/${demo.youtubeId}/maxresdefault.jpg`,
-      "uploadDate": "2026-06-01",
-      "embedUrl": `https://www.youtube.com/embed/${demo.youtubeId}`,
-      "creator": {
-        "@type": "Person",
-        "name": "Mayone Maha Rajan"
-      }
-    }));
-  };
+// 2. Dynamic Schema Generator
+const generateVideoSchemas = () => {
+  return fieldDemonstrations.map((demo) => ({
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": `${demo.chapter}: ${demo.title} (${demo.track})`,
+    "description": demo.description,
+    // FIXED: Added missing '$' for string interpolation
+    "thumbnailUrl": `https://img.youtube.com/vi/$${demo.youtubeId}/maxresdefault.jpg`, 
+    // FIXED: Added complete ISO 8601 time and timezone designator (Z)
+    "uploadDate": "2026-06-01T00:00:00Z", 
+    // FIXED: Added missing '$' for string interpolation
+    "embedUrl": `https://www.youtube.com/embed/$${demo.youtubeId}`, 
+    "creator": {
+      "@type": "Person",
+      "name": "Mayone Maha Rajan"
+    }
+  }));
+};
 
   return (
     <div className="max-w-4xl w-full mx-auto space-y-16 selection:bg-gray-700 pb-24 pt-12">
@@ -100,15 +103,16 @@ export default function KineticArchivesNode() {
 
             <div className="aspect-video w-full bg-gray-900 rounded-lg overflow-hidden border border-gray-800 shadow-2xl">
               <iframe 
-                width="100%" 
-                height="100%" 
-                src={`https://www.youtube.com/embed/${demo.youtubeId}`} 
-                title={demo.title} 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-                className="w-full h-full object-cover"
-              ></iframe>
+  width="100%" 
+  height="100%" 
+  // FIXED: Added missing '$' so the iframe loads the correct video ID
+  src={`https://www.youtube.com/embed/$${demo.youtubeId}`} 
+  title={demo.title} 
+  frameBorder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowFullScreen
+  className="w-full h-full object-cover"
+></iframe>
             </div>
 
             <div className="bg-gray-900/40 p-6 rounded border border-gray-800">

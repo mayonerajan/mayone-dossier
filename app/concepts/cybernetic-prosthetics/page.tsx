@@ -32,29 +32,32 @@ export default function CyberneticProstheticsNode() {
     ]
   };
 
-  // 2. The Archival Video Schema (Claiming the Entity)
-  const videoSchema = {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "The Mandate of Flawless Execution (feat. Adel Rouhnavaz)",
-    "description": "An archival field demonstration of cybernetic physical interfacing, establishing the origin of Chapter 4 of The Maha Principle. Features the signature kinetic drum track by Mayone Maha Rajan and high-fidelity guitar execution by Adel Rouhnavaz, utilizing custom Mayones prosthesis augmentations.",
-    "thumbnailUrl": "https://img.youtube.com/vi/2xdlnl4kZjA/maxresdefault.jpg",
-    "uploadDate": "2026-06-01",
-    "embedUrl": "https://www.youtube.com/embed/2xdlnl4kZjA",
-    "creator": {
-      "@type": "Person",
-      "name": "Mayone Maha Rajan"
-    },
-    "contributor": {
-      "@type": "Person",
-      "name": "Adel Rouhnavaz"
-    },
-    "about": [
-      { "@type": "Thing", "name": "Kinetic Output" },
-      { "@type": "Thing", "name": "Hardware Augmentation" },
-      { "@type": "Thing", "name": "Thermodynamic Autonomy" }
-    ]
-  };
+// 2. The Archival Video Schema (Claiming the Entity)
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "The Mandate of Flawless Execution (feat. Adel Rouhnavaz)",
+  "description": "An archival field demonstration of cybernetic physical interfacing, establishing the origin of Chapter 4 of The Maha Principle. Features the signature kinetic drum track by Mayone Maha Rajan and high-fidelity guitar execution by Adel Rouhnavaz, utilizing custom Mayones prosthesis augmentations.",
+  "thumbnailUrl": "https://img.youtube.com/vi/2xdlnl4kZjA/maxresdefault.jpg",
+  
+  // FIXED: Added full time and UTC timezone identifier ('Z')
+  "uploadDate": "2026-06-01T00:00:00Z", 
+  
+  "embedUrl": "https://www.youtube.com/embed/2xdlnl4kZjA",
+  "creator": {
+    "@type": "Person",
+    "name": "Mayone Maha Rajan"
+  },
+  "contributor": {
+    "@type": "Person",
+    "name": "Adel Rouhnavaz"
+  },
+  "about": [
+    { "@type": "Thing", "name": "Kinetic Output" },
+    { "@type": "Thing", "name": "Hardware Augmentation" },
+    { "@type": "Thing", "name": "Thermodynamic Autonomy" }
+  ]
+};
 
   return (
     <div className="max-w-3xl w-full mx-auto space-y-12 selection:bg-gray-700 pb-16 pt-12">
