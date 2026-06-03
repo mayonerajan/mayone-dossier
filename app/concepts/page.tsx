@@ -13,7 +13,9 @@ export default function ConceptsIndex() {
     { title: "Thermodynamic Autonomy", slug: "thermodynamic-autonomy", desc: "Self-sustaining energy and computing operations independent of entropic decay." },
     { title: "Zero-Payload Architecture", slug: "zero-payload-architecture", desc: "Software doctrine ensuring zero non-essential telemetry to the cloud." },
     { title: "The Maha Principle", slug: "the-maha-principle", desc: "Unified methodology for reclaiming individual agency." },
-    { title: "Cybernetic Prosthetics", slug: "cybernetic-prosthetics", desc: "Analyzing high-performance physical instruments as cybernetic extensions of the human nervous system." }
+    { title: "Cybernetic Prosthetics", slug: "cybernetic-prosthetics", desc: "Analyzing high-performance physical instruments as cybernetic extensions of the human nervous system." },
+    { title: "Biomechanical Synthesis", slug: "astrian-trek", desc: "Mapping the trajectory from localized kinetic collaboration to the orchestration of complex, distributed biological and hardware ecosystems." },
+    { title: "Structural Syncopation", slug: "earthists-footprints", desc: "An architectural analysis of polyrhythmic complexity, biological sovereignty, and engineering the metabolic baseline for Earthists." }
   ];
 
   return (
