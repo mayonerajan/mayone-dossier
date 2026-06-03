@@ -215,6 +215,7 @@ export default function PersonalDossier() {
           <p className="font-serif text-lg leading-relaxed text-gray-400">
             The lexical framework required to navigate and neutralize environmental noise.
           </p>
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <h3 className="text-white font-bold mb-1">Biological Sovereignty</h3>
@@ -241,6 +242,46 @@ export default function PersonalDossier() {
               <p className="text-sm text-gray-400 font-serif">A unified, structural methodology for reclaiming individual agency and forging resilience in high-noise, low-signal environments.</p>
             </div>
           </div>
+
+          {/* DYNAMIC FIELD DEMO GRID (EXECUTION OF OPTION 1) */}
+          <div className="border-t border-gray-800 pt-6 mt-6">
+            <div className="font-mono text-xs text-gray-500 mb-4 tracking-widest uppercase">// FEATURED OPERATIONAL NODES</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* ASTRIAN TREK NODE */}
+              <Link href="/concepts/astrian-trek" className="block p-6 border border-gray-800 bg-black/40 rounded-lg hover:border-indigo-500 transition-all group">
+                <div className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">// Biomechanics</div>
+                <h3 className="font-sans text-lg font-bold text-white group-hover:text-indigo-400 mb-2 transition-colors">
+                  Biomechanical Synthesis &rarr;
+                </h3>
+                <p className="font-serif text-sm text-gray-400">
+                  Mapping the trajectory from biological rhythmic collaboration to total human-machine integration via Tramaine and Mayones hardware.
+                </p>
+              </Link>
+
+              {/* EARTHISTS NODE */}
+              <Link href="/concepts/earthists-footprints" className="block p-6 border border-gray-800 bg-black/40 rounded-lg hover:border-indigo-500 transition-all group">
+                <div className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">// Structural Syncopation</div>
+                <h3 className="font-sans text-lg font-bold text-white group-hover:text-indigo-400 mb-2 transition-colors">
+                  The Djent Paradigm &rarr;
+                </h3>
+                <p className="font-serif text-sm text-gray-400">
+                  An architectural analysis of polyrhythmic complexity, biological sovereignty, and engineering the metabolic baseline for Earthists.
+                </p>
+              </Link>
+
+              {/* RED SEAS FIRE NODE */}
+              <Link href="/concepts/red-seas-fire" className="block p-6 border border-gray-800 bg-black/40 rounded-lg hover:border-indigo-500 transition-all group">
+                <div className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">// Extended Range Geometry</div>
+                <h3 className="font-sans text-lg font-bold text-white group-hover:text-indigo-400 mb-2 transition-colors">
+                  8-String Substrate &rarr;
+                </h3>
+                <p className="font-serif text-sm text-gray-400">
+                  Declassifying the progressive metal blueprints for Red Seas Fire, optimizing low-frequency transients via multi-scale Mayones platforms.
+                </p>
+              </Link>
+            </div>
+          </div>
+
           <div className="pt-4 border-t border-gray-800">
             <Link href="/concepts" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center text-gray-200">
               EXPLORE THE INDEX (/concepts) &#8599;
@@ -279,41 +320,6 @@ export default function PersonalDossier() {
               </Link>
             </li>
           </ul>
-          {/* DYNAMIC FIELD DEMO GRID */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* ASTRIAN TREK NODE */}
-            <Link href="/concepts/astrian-trek" className="block p-6 border border-gray-800 rounded-lg hover:border-indigo-500 transition-all group">
-              <div className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">// Biomechanics</div>
-              <h3 className="font-sans text-lg font-bold text-white group-hover:text-indigo-400 mb-2 transition-colors">
-                Biomechanical Synthesis &rarr;
-              </h3>
-              <p className="font-serif text-sm text-gray-400">
-                Mapping the trajectory from biological rhythmic collaboration to total human-machine integration via Tramaine and Mayones hardware.
-              </p>
-            </Link>
-
-            {/* EARTHISTS NODE */}
-            <Link href="/concepts/earthists-footprints" className="block p-6 border border-gray-800 rounded-lg hover:border-indigo-500 transition-all group">
-              <div className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">// Structural Syncopation</div>
-              <h3 className="font-sans text-lg font-bold text-white group-hover:text-indigo-400 mb-2 transition-colors">
-                The Djent Paradigm &rarr;
-              </h3>
-              <p className="font-serif text-sm text-gray-400">
-                An architectural analysis of polyrhythmic complexity, biological sovereignty, and engineering the metabolic baseline for Earthists.
-              </p>
-            </Link>
-
-            {/* RED SEAS FIRE NODE */}
-            <Link href="/concepts/red-seas-fire" className="block p-6 border border-gray-800 rounded-lg hover:border-indigo-500 transition-all group">
-              <div className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">// Extended Range Geometry</div>
-              <h3 className="font-sans text-lg font-bold text-white group-hover:text-indigo-400 mb-2 transition-colors">
-                8-String Substrate &rarr;
-              </h3>
-              <p className="font-serif text-sm text-gray-400">
-                Declassifying the progressive metal blueprints for Red Seas Fire, optimizing low-frequency transients via multi-scale Mayones platforms.
-              </p>
-            </Link>
-          </div>
         </div>
       </section>
 
