@@ -14,6 +14,10 @@ const conceptSlugs = [
   'thermodynamic-autonomy',
   'zero-payload-architecture',
   'the-maha-principle',
+  'cybernetic-prosthetics',
+  'astrian-trek',
+  'earthists-footprints',
+  'red-seas-fire',
 ]
 
 // Research abstract slugs linked from the homepage. VERIFY these pages exist
