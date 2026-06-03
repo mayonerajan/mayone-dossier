@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Astrian Trek & Biomechanical Synthesis | Mayone Maha Rajan',
-  description: 'A structural analysis of Tramaine\'s kinetic output, the Mayones hardware acquisition, and human performance over synthesized deterministic substrates.',
+  title: 'Astrian Trek & Networked Synthesis | Mayone Maha Rajan',
+  description: 'A structural analysis of Tramaine\'s kinetic output, hardware acquisition, and the orchestration of elite, distributed biological networks.',
 };
 
 export default function AstrianTrekNode() {
@@ -24,7 +24,7 @@ export default function AstrianTrekNode() {
       "@context": "https://schema.org",
       "@type": "VideoObject",
       "name": "Astrian Trek - Tramaine",
-      "description": "Tramaine demonstrating peak human-machine synthesis, executing orbital guitar payloads over a self-authored, deterministic synthesized rhythmic substrate.",
+      "description": "Tramaine orchestrating a high-fidelity biological network, executing orbital guitar payloads over elite human rhythmic execution, mediated by advanced hardware.",
       "thumbnailUrl": "https://img.youtube.com/vi/eXPPtvUVj38/maxresdefault.jpg",
       "uploadDate": "2026-06-03",
       "embedUrl": "https://www.youtube.com/embed/eXPPtvUVj38",
@@ -49,10 +49,10 @@ export default function AstrianTrekNode() {
           [ DECLASSIFIED ANALYSIS ]
         </div>
         <h1 className="font-sans text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
-          Biomechanical Synthesis: The Astrian Trek
+          Networked Synthesis: The Astrian Trek
         </h1>
         <p className="font-serif text-xl leading-relaxed text-gray-400 max-w-3xl">
-          Mapping the trajectory from biological rhythmic collaboration to total human-machine integration.
+          Mapping the trajectory from localized kinetic collaboration to the orchestration of complex, distributed biological and hardware ecosystems.
         </p>
       </header>
 
@@ -90,21 +90,21 @@ export default function AstrianTrekNode() {
           // Cybernetic Augmentation
         </h3>
         <p className="font-serif text-lg text-gray-300 leading-relaxed">
-          Peak biological intent requires frictionless hardware to manifest into reality. Following this operational validation, Tramaine secured the ultimate cybernetic prosthetic: becoming a signature artist for <strong>Mayones Guitars & Basses</strong>. By interfacing with their zero-compromise ergonomics, the latency between his cognitive intent and physical execution was structurally eliminated.
+          Peak biological intent requires frictionless hardware to manifest into reality. Following this operational validation, Tramaine secured the ultimate cybernetic prosthetics: becoming a signature artist for <strong>Mayones Guitars & Basses</strong>. By integrating these zero-compromise physical instruments with advanced digital profiling (Kemper Amps, STL Tones), the latency between his cognitive intent and acoustic output was structurally eliminated.
         </p>
       </section>
 
-      {/* PHASE 3: THE SYNTHETIC SUBSTRATE */}
+      {/* PHASE 3: THE NETWORKED SUBSTRATE */}
       <section className="space-y-8 border-t border-gray-800 pt-12">
         <div className="space-y-4">
           <h2 className="font-sans text-2xl font-bold text-white border-l-2 border-indigo-500 pl-4 uppercase tracking-wide">
-            Phase 2: The Synthetic Substrate
+            Phase 2: High-Fidelity Ecosystem Orchestration
           </h2>
           <p className="font-serif text-lg text-gray-300 leading-relaxed pl-4">
-            With his hardware pipeline secured, Tramaine transitioned from interfacing with biological operators to authoring his own autonomous architectures. In <em>Astrian Trek</em>, he replaces the human rhythmic baseline entirely with a <strong>deterministic, synthesized drum matrix</strong>.
+            With his hardware pipeline secured, Tramaine evolved from acting as a single node interfacing with a pre-existing baseline to architecting the entire system. In <em>Astrian Trek</em>, he does not succumb to the ease of algorithmic, synthesized drum grids. Instead, he <strong>scales the biological network</strong>.
           </p>
           <p className="font-serif text-lg text-gray-300 leading-relaxed pl-4">
-            This is the pinnacle of biomechanical synthesis. The computer dictates a mathematically flawless, zero-drift algorithmic grid. Over this synthetic foundation, Tramaine deploys a hyper-expressive, organic human payload. It proves that technological automation does not have to erase human agency; rather, when governed correctly, the machine substrate elevates the sovereign human operator to achieve previously inaccessible trajectories.
+            He drafted elite human operators to execute his structural vision: Jelly Cardarelli providing the unrelenting percussive metabolic baseline, Andrea Casali anchoring the low-frequency spectrum, and Alex Argento securing the final production and mixing parameters. This demonstrates advanced systemic governance—orchestrating a distributed network of highly specialized biological outputs to achieve an emotional, modern, yet classical trajectory that isolated software could never replicate.
           </p>
         </div>
 
@@ -119,6 +119,32 @@ export default function AstrianTrekNode() {
             allowFullScreen
             className="w-full h-full object-cover"
           ></iframe>
+        </div>
+
+        {/* METADATA / OPERATIONAL LOADOUT */}
+        <div className="bg-[#0a0a0c] p-6 rounded border border-gray-800 mt-8 flex flex-col md:flex-row gap-8">
+          <div className="flex-1">
+            <h4 className="font-mono text-xs text-indigo-400 font-bold uppercase tracking-widest mb-4 border-b border-gray-800 pb-2">
+              Biological Operators
+            </h4>
+            <ul className="font-sans text-sm text-gray-400 space-y-2">
+              <li><strong className="text-gray-200">Tramaine:</strong> Composition & Production</li>
+              <li><strong className="text-gray-200">Jelly Cardarelli:</strong> Drums</li>
+              <li><strong className="text-gray-200">Andrea Casali:</strong> Bass</li>
+              <li><strong className="text-gray-200">Alex Argento:</strong> Co-Production, Mix, Master, Keys</li>
+              <li><strong className="text-gray-200">Al Joseph / Claudio Pietronik:</strong> Guest Nodes</li>
+            </ul>
+          </div>
+          <div className="flex-1">
+            <h4 className="font-mono text-xs text-green-400 font-bold uppercase tracking-widest mb-4 border-b border-gray-800 pb-2">
+              Hardware & Software Pipeline
+            </h4>
+            <ul className="font-sans text-sm text-gray-400 space-y-2">
+              <li><strong className="text-gray-200">Physical:</strong> Mayones Guitars, Kiesel Guitars</li>
+              <li><strong className="text-gray-200">Signal Path:</strong> Bareknuckle Pickups, Dunlop Strings</li>
+              <li><strong className="text-gray-200">Modeling:</strong> Kemper Amps, Mercuriall, STL Tones</li>
+            </ul>
+          </div>
         </div>
       </section>
 
