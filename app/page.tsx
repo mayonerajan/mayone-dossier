@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import JoinForm from './JoinForm';
 
 export const metadata = {
   title: 'Mayone Maha Rajan | Personal Dossier',
@@ -405,17 +406,7 @@ export default function PersonalDossier() {
           <p className="font-serif text-lg leading-relaxed text-gray-400">
             To counter algorithmic capture, you must consciously curate your intelligence feed. Join the network for structural countermeasures, private frameworks, and ongoing research updates.
           </p>
-          <form className="flex flex-col sm:flex-row gap-3">
-             <input 
-                type="email" 
-                placeholder="SECURE EMAIL ADDRESS" 
-                className="bg-gray-900 border border-gray-700 text-white px-4 py-2 font-mono text-sm focus:outline-none focus:border-indigo-500 w-full sm:w-auto flex-grow"
-                required
-              />
-             <button type="submit" className="px-6 py-2 bg-indigo-600 text-white font-bold hover:bg-indigo-500 text-sm font-mono transition-colors text-center whitespace-nowrap">
-               JOIN NETWORK
-             </button>
-          </form>
+          <JoinForm />
           <div className="pt-2 flex flex-wrap gap-4">
             <a href="https://www.mahastrategies.com/manifesto" target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">
               [ READ MANIFESTO ]
