@@ -43,6 +43,7 @@ export default function PersonalDossier() {
           'https://x.com/mayonemaha',
           'https://www.mahastrategies.com',
           'https://publish.mahastrategies.com',
+          'https://research.mahastrategies.com',
         ],
       },
       {
@@ -77,8 +78,18 @@ export default function PersonalDossier() {
 
       {/* HEADER / IDENTITY */}
       <header className="space-y-6 pt-12">
-        <div className="font-mono text-xs text-gray-500 tracking-widest uppercase border-b border-gray-800 pb-4">
-          [ DOSSIER: ACTIVE ]
+        <div className="flex justify-between items-center border-b border-gray-800 pb-4">
+          <div className="font-mono text-xs text-gray-500 tracking-widest uppercase">
+            [ DOSSIER: ACTIVE ]
+          </div>
+          <a 
+            href="https://www.mahastrategies.com/contact" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="font-mono text-xs text-gray-500 hover:text-indigo-400 tracking-widest uppercase transition-colors"
+          >
+            [ SECURE COMMS ↗ ]
+          </a>
         </div>
         <h1 className="font-sans text-4xl sm:text-5xl font-bold tracking-tight text-white">
           Mayone Maha Rajan
@@ -243,7 +254,7 @@ export default function PersonalDossier() {
             </div>
           </div>
 
-          {/* DYNAMIC FIELD DEMO GRID (EXECUTION OF OPTION 1) */}
+          {/* DYNAMIC FIELD DEMO GRID */}
           <div className="border-t border-gray-800 pt-6 mt-6">
             <div className="font-mono text-xs text-gray-500 mb-4 tracking-widest uppercase">// FEATURED OPERATIONAL NODES</div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -293,12 +304,50 @@ export default function PersonalDossier() {
       {/* THE RECORD / SELECTED WRITING */}
       <section className="space-y-4">
         <h2 className="font-sans text-sm font-semibold tracking-widest uppercase text-white border-l-2 border-indigo-500 pl-4">
-          VII. Research Abstracts
+          VII. Formal Research & Abstracts
         </h2>
         <div className="pl-4 border-l-2 border-transparent space-y-6">
           <p className="font-serif text-lg leading-relaxed text-gray-400">
-            Executive summaries of institutional intelligence briefs and protocols developed for structural resilience.
+            Executive summaries of institutional intelligence briefs and peer-reviewed protocols developed for structural resilience.
           </p>
+
+          {/* ACADEMIC NODE INJECTION */}
+          <div className="p-6 border border-emerald-900/50 bg-emerald-950/10 rounded-lg mb-6">
+            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-4">
+              <div>
+                <p className="text-xs text-emerald-400 tracking-widest uppercase mb-1 font-mono">
+                  [ ACADEMIC NODE ONLINE ]
+                </p>
+                <h3 className="text-white font-sans font-bold text-lg">research.mahastrategies.com</h3>
+              </div>
+              <a 
+                href="https://research.mahastrategies.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block border border-emerald-500 text-emerald-400 font-mono text-[10px] tracking-widest py-2 px-4 hover:bg-emerald-500 hover:text-white transition-colors uppercase text-center whitespace-nowrap"
+              >
+                Access Subdomain ↗
+              </a>
+            </div>
+            <p className="text-sm text-emerald-100/70 font-serif mb-4">
+              Rigorous systemic sovereignty research and formal publications are actively hosted on our dedicated academic server.
+            </p>
+            <div className="border-t border-emerald-900/50 pt-4">
+              <a 
+                href="https://research.mahastrategies.com/papers/thermodynamic-isomorphism"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex justify-between items-center"
+              >
+                <span className="text-sm text-emerald-300 font-semibold group-hover:text-emerald-400 transition-colors">
+                  Paper: Thermodynamic Isomorphism
+                </span>
+                <span className="text-[10px] text-emerald-500 group-hover:text-emerald-400 font-mono uppercase tracking-widest">
+                  Read ↗
+                </span>
+              </a>
+            </div>
+          </div>
           
           <ul className="space-y-4 mb-8">
             <li>
@@ -367,7 +416,7 @@ export default function PersonalDossier() {
                JOIN NETWORK
              </button>
           </form>
-          <div className="pt-2 flex gap-4">
+          <div className="pt-2 flex flex-wrap gap-4">
             <a href="https://www.mahastrategies.com/manifesto" target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">
               [ READ MANIFESTO ]
             </a>
@@ -380,12 +429,15 @@ export default function PersonalDossier() {
 
       {/* FOOTER */}
       <footer className="pt-12 pb-8 border-t border-gray-800 space-y-4">
-        <div className="flex gap-4 font-mono text-xs">
+        <div className="flex flex-wrap gap-4 font-mono text-xs">
           <a href="https://www.linkedin.com/in/mayonrajan" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-400 transition-colors">
-            LINKEDIN &#8599;
+            LINKEDIN ↗
           </a>
           <a href="https://x.com/mayonemaha" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-400 transition-colors">
-            X / TWITTER &#8599;
+            X / TWITTER ↗
+          </a>
+          <a href="https://www.mahastrategies.com/contact" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-400 transition-colors">
+            CONTACT ↗
           </a>
         </div>
         <div className="font-mono text-xs text-gray-600 flex flex-col sm:flex-row justify-between gap-2">
