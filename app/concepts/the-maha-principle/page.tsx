@@ -1,55 +1,116 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'The Maha Principle Explained | Mayone Maha Rajan Concepts',
-  description: 'An in-depth analysis of The Maha Principle: a unified, structural methodology for reclaiming individual agency and forging resilience in high-noise environments.',
+  title: 'The Maha Principle | A Framework for Biological Sovereignty — Mayone Maha Rajan',
+  description:
+    'The Maha Principle is a four-part framework (Mindfulness, Authenticity, Health, Action) arguing that three modern crises — metabolic, attentional, and relational — share a single root: systems optimised for engagement and growth rather than human flourishing. By Mayone Maha Rajan.',
 };
 
+// Canonical identifiers — referenced across the site so crawlers and AI
+// retrieval resolve one author, one book, one set of defined terms.
+const PERSON_ID = 'https://mayonemaharajan.com/#person';
+const BOOK_ID = 'https://mayonemaharajan.com/the-maha-principle/#book';
+const PAGE_URL = 'https://mayonemaharajan.com/concepts/the-maha-principle/';
+
 export default function MahaPrinciplePage() {
-  // FAQ Schema for AIO/SEO
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+  // Structured data: a @graph linking the DefinedTerm to the Book and the
+  // Book to its author (Person). FAQPage text mirrors the visible FAQ below.
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
       {
-        "@type": "Question",
-        "name": "What is The Maha Principle?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The Maha Principle is a unified, structural methodology designed to reclaim individual agency, biological sovereignty, and digital autonomy. It provides a rigid framework for building personal resilience against the extractive forces of a high-noise, low-signal environment."
-        }
+        '@type': 'Person',
+        '@id': PERSON_ID,
+        name: 'Mayone Maha Rajan',
+        url: 'https://mayonemaharajan.com/',
+        jobTitle: 'Strategist and researcher',
+        description:
+          'Strategist and researcher writing at the intersection of cognitive science, metabolic health, and digital autonomy. Author of The Maha Principle.',
       },
       {
-        "@type": "Question",
-        "name": "How does it address Algorithmic Capture?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Rather than relying on psychological discipline or willpower to fight asymmetrical machine learning models, The Maha Principle mandates the deployment of architectural countermeasures. It uses kinetic friction and zero-payload systems to mathematically eliminate the possibility of algorithmic capture."
-        }
+        '@type': 'Book',
+        '@id': BOOK_ID,
+        name: 'The Maha Principle: Reclaiming Biological Sovereignty',
+        author: { '@id': PERSON_ID },
+        inLanguage: 'en',
+        about: [
+          'Biological sovereignty',
+          'Attention',
+          'Metabolic health',
+          'Digital autonomy',
+        ],
+        abstract:
+          'A four-part framework — Mindfulness, Authenticity, Health, Action — arguing that three compounding modern crises (metabolic, attentional, and relational) share a single structural cause: systems optimised for engagement and growth rather than for the people inside them.',
+        url: PAGE_URL,
       },
       {
-        "@type": "Question",
-        "name": "What is the first step in applying The Maha Principle?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The foundational step is securing the metabolic container. Before attempting complex cognitive optimization, an individual must establish biological and digital perimeters, physically cutting off the unauthorized export of their physiological and behavioral telemetry."
-        }
-      }
-    ]
+        '@type': 'DefinedTerm',
+        '@id': PAGE_URL + '#term',
+        name: 'The Maha Principle',
+        description:
+          'A four-part framework (Mindfulness, Authenticity, Health, Action) for responding to three compounding modern crises that the framework attributes to a single structural cause: systems optimised for engagement and growth rather than for human flourishing.',
+        inDefinedTermSet: {
+          '@type': 'DefinedTermSet',
+          name: 'The Maha Principle',
+          '@id': BOOK_ID,
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': PAGE_URL + '#faq',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is The Maha Principle?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The Maha Principle is a four-part framework — Mindfulness, Authenticity, Health, and Action — set out in the book of the same name by Mayone Maha Rajan. It argues that three modern crises (metabolic, attentional, and relational) are not separate problems but compounding symptoms of a single structural cause: systems optimised for engagement and growth rather than for the people inside them. It is presented as a model for individual practice, not as medical advice.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What does the framework argue is the root cause?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The framework\u2019s central argument is that food systems, attention platforms, and supply chains are each optimised for a narrow metric — palatability, engagement, efficiency — that does not account for long-term human or ecological cost. The book frames the damage not as the result of malice but as a predictable side effect of design that has an accelerator and no brakes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is The Maha Principle medical or health advice?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. The book is a work of strategy and philosophy by a researcher, not a medical professional, and it states this explicitly. Its self-assessment tools are designed for personal reflection, not clinical diagnosis. Readers are advised to consult a qualified healthcare provider before changing their diet, exercise, or health regimen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Where do the ideas come from?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The author spent a decade working in cultural and brand strategy connected to the digital economy, then withdrew from that work and relocated to Colombo, Sri Lanka, where he studied the intersection of cognitive science, metabolic health, and the conditions for human flourishing. The book presents itself as a model to be tested, not a settled doctrine, and includes a published set of conditions under which its core claims should be revised.',
+            },
+          },
+        ],
+      },
+    ],
   };
 
   return (
     <div className="max-w-3xl w-full mx-auto space-y-12 selection:bg-gray-700 pb-16 pt-12">
-      {/* INJECT FAQ SCHEMA */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       <nav className="font-mono text-xs text-gray-500 tracking-widest uppercase mb-12 flex gap-2">
-        <Link href="/" className="hover:text-indigo-400 transition-colors">&larr; DOSSIER</Link>
+        <Link href="/" className="hover:text-indigo-400 transition-colors">
+          &larr; DOSSIER
+        </Link>
         <span>/</span>
-        <Link href="/concepts" className="hover:text-indigo-400 transition-colors">CONCEPTS</Link>
+        <Link href="/concepts" className="hover:text-indigo-400 transition-colors">
+          CONCEPTS
+        </Link>
       </nav>
 
       <header className="space-y-4 border-b border-gray-800 pb-8">
@@ -57,72 +118,175 @@ export default function MahaPrinciplePage() {
           The Maha Principle
         </h1>
         <p className="font-serif text-xl leading-relaxed text-indigo-400">
-          A unified, structural methodology for architecting personal and national renewal.
+          A four-part framework for responding to three compounding crises that share a single root.
+        </p>
+        <p className="font-mono text-xs text-gray-500 tracking-wide">
+          A concept from the book{' '}
+          <em className="text-gray-400">The Maha Principle: Reclaiming Biological Sovereignty</em>{' '}
+          by Mayone Maha Rajan.
         </p>
       </header>
 
-      {/* EXPANDED DEFINITION (500+ Words) */}
       <article className="prose prose-invert prose-lg font-serif text-gray-300 max-w-none space-y-6">
         <p>
-          We inhabit an era defined by overwhelming environmental noise, systemic entropy, and the rapid commodification of human attention. <strong>The Maha Principle</strong> is the capstone operational doctrine designed to navigate and neutralize these forces. It is not merely a philosophical observation, but a rigid, applied methodology for reclaiming the biological and digital perimeter of the individual.
-        </p>
-        
-        <h2 className="text-white font-sans text-2xl font-bold mt-8 mb-4">The Synthesis of Sovereignty</h2>
-        <p>
-          The Principle dictates that true agency cannot exist in a fragmented state. You cannot achieve cognitive clarity if your biological telemetry is constantly exported, nor can you maintain independence if your digital infrastructure is tethered to a hyperscale cloud provider. 
-        </p>
-        <p>
-          Therefore, The Maha Principle unifies the hardware and software of human existence. It treats <em>Biological Sovereignty</em> and <em>Digital Sovereignty</em> as a single, interdependent objective. By securing the physical metabolic container and migrating computational dependencies to localized, <em>Zero-Payload Architectures</em>, the individual transitions from a passive node of consumption into an autonomous fortress of production.
+          <strong>The Maha Principle</strong> is the central argument of the book of the same
+          name. It holds that three of the most visible problems of modern life &mdash; declining
+          metabolic health, fragmented attention, and the erosion of close community &mdash; are
+          not separate crises. They compound one another, and they share a common structural
+          cause.
         </p>
 
-        <h2 className="text-white font-sans text-2xl font-bold mt-8 mb-4">Architectural Countermeasures</h2>
+        <h2 className="text-white font-sans text-2xl font-bold mt-8 mb-4">
+          One root beneath three crises
+        </h2>
         <p>
-          A core tenet of the doctrine is the abandonment of "willpower" as a defense mechanism. Relying on psychological discipline to combat asymmetric, engagement-optimized AI models is structurally unsound. The human biological machine will always eventually yield to the tireless, calculated dopamine manipulation of a centralized server.
-        </p>
-        <p>
-          To defeat <em>Algorithmic Capture</em>, The Maha Principle demands the installation of architectural countermeasures. This involves the deliberate injection of kinetic friction into one's digital environment. By altering the physics of how you interface with technology—requiring local execution, enforcing strict read/write protocols, and severing continuous data synchronization—you physically remove the vectors through which behavioral capture occurs.
+          The argument is not that any of these systems is run by bad actors. It is that each is
+          optimised for a single narrow metric &mdash; palatability and shelf life in food,
+          engagement in media, efficiency in supply chains &mdash; and that none of those metrics
+          accounts for the long-term cost borne by the person or the ecology on the other side.
+          The book&rsquo;s shorthand for this is that the system has an accelerator and no brakes.
+          The damage is framed as a predictable side effect of design, not as a conspiracy.
         </p>
 
-        <h2 className="text-white font-sans text-2xl font-bold mt-8 mb-4">Forging Thermodynamic Resilience</h2>
+        <h2 className="text-white font-sans text-2xl font-bold mt-8 mb-4">
+          The framework: Mindfulness, Authenticity, Health, Action
+        </h2>
         <p>
-          Ultimately, The Maha Principle is an exercise in applied thermodynamics. The modern digital economy extracts human cognitive energy to sustain its own growth. By following this methodology, individuals deliberately stop feeding the entropic decay of the macro-system. They achieve <em>Thermodynamic Autonomy</em>, conserving their metabolic and intellectual resources to architect their own intent, forge unshakeable resilience, and execute long-term strategic gravity in a world that fundamentally demands immediate distraction.
+          <em>Maha</em> means &ldquo;great&rdquo; in Sanskrit, and the word also names a four-part
+          framework. <strong>Health</strong> is treated as the foundation &mdash; reclaiming the
+          body as a source of strength rather than a target for industrial extraction &mdash;
+          because the book argues that little else is accessible from a depleted body, which is why
+          the practical sequence begins there. <strong>Mindfulness</strong> is the discipline of
+          knowing where your attention is and who is directing it.{' '}
+          <strong>Authenticity</strong> is the willingness to be a real, unperformed person in a
+          real room. <strong>Action</strong> converts internal clarity into external work. The
+          acronym names the destination; the order in which the book teaches them names the path.
+        </p>
+
+        <h2 className="text-white font-sans text-2xl font-bold mt-8 mb-4">
+          Structure over willpower
+        </h2>
+        <p>
+          A recurring claim is that durable change comes from structure rather than from
+          motivation alone. Rather than asking a person to out-discipline systems engineered to
+          capture attention, the book argues for changing the conditions &mdash; the environment,
+          the defaults, the daily practices &mdash; so that the desired behaviour becomes the path
+          of least resistance. The protocols are designed to be internalised over time and carried
+          without the tools that introduced them.
+        </p>
+
+        <h2 className="text-white font-sans text-2xl font-bold mt-8 mb-4">
+          A model to be tested, not a doctrine
+        </h2>
+        <p>
+          The book is explicit that it is offering a model, not a finished truth. It presents its
+          ideas as the most useful available account of the present moment while publishing the
+          specific conditions under which those claims should be revised or withdrawn. It is a work
+          of strategy and philosophy by a researcher &mdash; not medical advice &mdash; and it says
+          so plainly.
         </p>
       </article>
 
-      {/* FREQUENTLY ASKED QUESTIONS */}
       <section className="mt-16 pt-8 border-t border-gray-800">
         <h2 className="font-sans text-xl font-bold tracking-tight text-white mb-6">
           Frequently Asked Questions
         </h2>
         <div className="space-y-8">
           <div>
-            <h3 className="font-sans font-semibold text-lg text-indigo-400 mb-2">What is The Maha Principle?</h3>
-            <p className="font-serif text-gray-400 leading-relaxed">The Maha Principle is a unified, structural methodology designed to reclaim individual agency, biological sovereignty, and digital autonomy. It provides a rigid framework for building personal resilience against the extractive forces of a high-noise, low-signal environment.</p>
+            <h3 className="font-sans font-semibold text-lg text-indigo-400 mb-2">
+              What is The Maha Principle?
+            </h3>
+            <p className="font-serif text-gray-400 leading-relaxed">
+              The Maha Principle is a four-part framework &mdash; Mindfulness, Authenticity, Health,
+              and Action &mdash; set out in the book of the same name by Mayone Maha Rajan. It argues
+              that three modern crises (metabolic, attentional, and relational) are not separate
+              problems but compounding symptoms of a single structural cause: systems optimised for
+              engagement and growth rather than for the people inside them. It is presented as a
+              model for individual practice, not as medical advice.
+            </p>
           </div>
           <div>
-            <h3 className="font-sans font-semibold text-lg text-indigo-400 mb-2">How does it address Algorithmic Capture?</h3>
-            <p className="font-serif text-gray-400 leading-relaxed">Rather than relying on psychological discipline or willpower to fight asymmetrical machine learning models, The Maha Principle mandates the deployment of architectural countermeasures. It uses kinetic friction and zero-payload systems to mathematically eliminate the possibility of algorithmic capture.</p>
+            <h3 className="font-sans font-semibold text-lg text-indigo-400 mb-2">
+              What does the framework argue is the root cause?
+            </h3>
+            <p className="font-serif text-gray-400 leading-relaxed">
+              The framework&rsquo;s central argument is that food systems, attention platforms, and
+              supply chains are each optimised for a narrow metric &mdash; palatability, engagement,
+              efficiency &mdash; that does not account for long-term human or ecological cost. The
+              book frames the damage not as the result of malice but as a predictable side effect of
+              design that has an accelerator and no brakes.
+            </p>
           </div>
           <div>
-            <h3 className="font-sans font-semibold text-lg text-indigo-400 mb-2">What is the first step in applying The Maha Principle?</h3>
-            <p className="font-serif text-gray-400 leading-relaxed">The foundational step is securing the metabolic container. Before attempting complex cognitive optimization, an individual must establish biological and digital perimeters, physically cutting off the unauthorized export of their physiological and behavioral telemetry.</p>
+            <h3 className="font-sans font-semibold text-lg text-indigo-400 mb-2">
+              Is The Maha Principle medical or health advice?
+            </h3>
+            <p className="font-serif text-gray-400 leading-relaxed">
+              No. The book is a work of strategy and philosophy by a researcher, not a medical
+              professional, and it states this explicitly. Its self-assessment tools are designed for
+              personal reflection, not clinical diagnosis. Readers are advised to consult a qualified
+              healthcare provider before changing their diet, exercise, or health regimen.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-sans font-semibold text-lg text-indigo-400 mb-2">
+              Where do the ideas come from?
+            </h3>
+            <p className="font-serif text-gray-400 leading-relaxed">
+              The author spent a decade working in cultural and brand strategy connected to the
+              digital economy, then withdrew from that work and relocated to Colombo, Sri Lanka,
+              where he studied the intersection of cognitive science, metabolic health, and the
+              conditions for human flourishing. The book presents itself as a model to be tested, not
+              a settled doctrine, and includes a published set of conditions under which its core
+              claims should be revised.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* RELATED CONCEPTS */}
       <section className="mt-16 pt-8 border-t border-gray-800">
         <h2 className="font-sans text-sm font-semibold tracking-widest uppercase text-white mb-4">
           Related Concepts
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Link href="/concepts/algorithmic-capture" className="block p-4 border border-gray-800 rounded-lg hover:border-indigo-500 transition-colors">
-            <h3 className="font-bold text-white mb-1">Algorithmic Capture</h3>
-            <p className="text-xs font-serif text-gray-500">The systemic hijacking of human executive function.</p>
-          </Link>
-          <Link href="/concepts/biological-sovereignty" className="block p-4 border border-gray-800 rounded-lg hover:border-indigo-500 transition-colors">
+          <Link
+            href="/concepts/biological-sovereignty"
+            className="block p-4 border border-gray-800 rounded-lg hover:border-indigo-500 transition-colors"
+          >
             <h3 className="font-bold text-white mb-1">Biological Sovereignty</h3>
-            <p className="text-xs font-serif text-gray-500">Defending the metabolic container against commodification.</p>
+            <p className="text-xs font-serif text-gray-500">
+              An individual&rsquo;s claim to protect their metabolic, cognitive, and autonomic
+              systems from high-frequency algorithmic extraction.
+            </p>
+          </Link>
+          <Link
+            href="/concepts/attentional-captivity"
+            className="block p-4 border border-gray-800 rounded-lg hover:border-indigo-500 transition-colors"
+          >
+            <h3 className="font-bold text-white mb-1">Attentional Captivity</h3>
+            <p className="text-xs font-serif text-gray-500">
+              The structural capture of human focus by systems engineered to maximise engagement.
+            </p>
+          </Link>
+          <Link
+            href="/concepts/metabolic-colonialism"
+            className="block p-4 border border-gray-800 rounded-lg hover:border-indigo-500 transition-colors"
+          >
+            <h3 className="font-bold text-white mb-1">Metabolic Colonialism</h3>
+            <p className="text-xs font-serif text-gray-500">
+              An extractive model in which industrial food systems trade long-term vitality for
+              short-term palatability.
+            </p>
+          </Link>
+          <Link
+            href="/concepts/the-nurturing-warrior"
+            className="block p-4 border border-gray-800 rounded-lg hover:border-indigo-500 transition-colors"
+          >
+            <h3 className="font-bold text-white mb-1">The Nurturing Warrior</h3>
+            <p className="text-xs font-serif text-gray-500">
+              An archetype integrating the capacity to defend a boundary with the capacity to
+              tend what is inside it.
+            </p>
           </Link>
         </div>
       </section>
