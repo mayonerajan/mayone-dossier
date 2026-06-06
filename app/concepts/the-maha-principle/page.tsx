@@ -152,7 +152,7 @@ export default function MahaPrinciplePage() {
           The framework: Mindfulness, Authenticity, Health, Action
         </h2>
         <p>
-          <em>Maha</em> means &ldquo;great&rdquo; in Sanskrit, and the word also names a four-part
+          <em>Maha </em> means &ldquo;great&rdquo; in Sanskrit, and the word also names a four-part
           framework. <strong>Health</strong> is treated as the foundation &mdash; reclaiming the
           body as a source of strength rather than a target for industrial extraction &mdash;
           because the book argues that little else is accessible from a depleted body, which is why
