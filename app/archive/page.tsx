@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import SignupForm from './SignupForm'; // colocated copy; posts to the same /api/subscribe route
 
 export const metadata = {
   title: 'Kinetic Archives & Field Demonstrations | Mayone Maha Rajan',
@@ -59,11 +60,11 @@ const generateVideoSchemas = () => {
     "name": `${demo.chapter}: ${demo.title} (${demo.track})`,
     "description": demo.description,
     // FIXED: Added missing '$' for string interpolation
-    "thumbnailUrl": `https://img.youtube.com/vi/$${demo.youtubeId}/maxresdefault.jpg`, 
+    "thumbnailUrl": `https://img.youtube.com/vi/${demo.youtubeId}/maxresdefault.jpg`, 
     // FIXED: Added complete ISO 8601 time and timezone designator (Z)
     "uploadDate": "2026-06-01T00:00:00Z", 
     // FIXED: Added missing '$' for string interpolation
-    "embedUrl": `https://www.youtube.com/embed/$${demo.youtubeId}`, 
+    "embedUrl": `https://www.youtube.com/embed/${demo.youtubeId}`, 
     "creator": {
       "@type": "Person",
       "name": "Mayone Maha Rajan"
@@ -106,7 +107,7 @@ const generateVideoSchemas = () => {
   width="100%" 
   height="100%" 
   // FIXED: Added missing '$' so the iframe loads the correct video ID
-  src={`https://www.youtube.com/embed/$${demo.youtubeId}`} 
+  src={`https://www.youtube.com/embed/${demo.youtubeId}`} 
   title={demo.title} 
   frameBorder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -126,6 +127,23 @@ const generateVideoSchemas = () => {
           </section>
         ))}
       </div>
+
+      {/* Conversion: bridge from the music to the book, with capture */}
+      <section className="border-t border-gray-800 pt-16 mt-8">
+        <div className="max-w-2xl mx-auto text-center space-y-4">
+          <div className="font-mono text-xs text-indigo-500 font-semibold tracking-widest">[ WHERE THIS GOES NEXT ]</div>
+          <h2 className="font-sans text-2xl sm:text-3xl font-bold text-white">
+            The rhythm was always the argument.
+          </h2>
+          <p className="font-serif text-lg leading-relaxed text-gray-400">
+            These tracks were the first version of an idea I&rsquo;ve spent years building into something larger &mdash; a framework about discipline, structure, and reclaiming your own signal. I&rsquo;m putting it in a book, <em>The Maha Principle</em>. If the playing meant something to you, the writing might too. I&rsquo;ll send you the first chapter.
+          </p>
+          <div className="pt-4">
+            <SignupForm />
+          </div>
+          <p className="font-mono text-[11px] text-gray-600 pt-2">No noise. Unsubscribe anytime.</p>
+        </div>
+      </section>
     </div>
   );
 }
