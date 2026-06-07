@@ -4,7 +4,7 @@ import JoinForm from './JoinForm';
 
 export const metadata = {
   title: 'Mayone Maha Rajan | Personal Dossier',
-  description: 'Cultural strategist, author, and technology founder working at the intersection of cognitive science, applied cybernetics, and agentic systems.',
+  description: 'Mayone Maha Rajan is a cultural strategist, author, and technology founder architecting the Maha Principle for biological sovereignty and defense against algorithmic capture at the intersection of cognitive science, applied cybernetics, and agentic systems.',
 };
 
 export default function PersonalDossier() {
@@ -20,7 +20,7 @@ export default function PersonalDossier() {
         url: SITE_URL,
         jobTitle: 'Managing Director',
         description:
-          'Cultural strategist, author, and technology founder working at the intersection of cognitive science, applied cybernetics, and agentic systems.',
+          'Mayone Maha Rajan is a cultural strategist, author, and technology founder architecting the Maha Principle for biological sovereignty and defense against algorithmic capture at the intersection of cognitive science, applied cybernetics, and agentic systems.',
         alumniOf: {
           '@type': 'CollegeOrUniversity',
           name: 'University of California, San Diego',
@@ -42,6 +42,8 @@ export default function PersonalDossier() {
         sameAs: [
           'https://www.linkedin.com/in/mayonrajan',
           'https://x.com/mayonemaha',
+          'https://www.facebook.com/622592662',
+          'https://www.instagram.com/mayon_rajan',
           'https://www.mahastrategies.com',
           'https://publish.mahastrategies.com',
           'https://research.mahastrategies.com',
@@ -96,7 +98,7 @@ export default function PersonalDossier() {
           Mayone Maha Rajan
         </h1>
         <p className="font-serif text-xl leading-relaxed text-gray-300">
-          Cultural strategist, author, and technology founder. Architecting frameworks for personal and national renewal at the intersection of cognitive science, applied cybernetics, and agentic systems.
+          Cultural strategist, author, and technology founder. I architect the Maha Principle — frameworks for biological sovereignty and defense against algorithmic capture — at the intersection of cognitive science, applied cybernetics, and agentic systems.
         </p>
       </header>
 
@@ -145,7 +147,7 @@ export default function PersonalDossier() {
               <span className="absolute -left-[21px] top-2 h-2 w-2 rounded-full bg-indigo-500"></span>
               <p className="text-sm text-gray-300 font-sans leading-relaxed">
                 <strong className="text-white uppercase tracking-wider text-xs block mb-1">4. Kinetic Archival Output</strong>
-                Stress-tests these theoretical frameworks in the physical realm through rigorous rhythmic matrices, demanding absolute thermodynamic efficiency.
+                Stress-tests frameworks in the physical realm through percussive architecture — notably as Percussive Architect for Earthists' "Footprints" on Dreamscape (Tragic Hero Records) — demanding absolute thermodynamic efficiency.
               </p>
             </li>
           </ul>
@@ -426,6 +428,12 @@ export default function PersonalDossier() {
           </a>
           <a href="https://x.com/mayonemaha" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-400 transition-colors">
             X / TWITTER ↗
+          </a>
+          <a href="https://www.facebook.com/622592662" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-400 transition-colors">
+            FACEBOOK ↗
+          </a>
+          <a href="https://www.instagram.com/mayon_rajan" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-400 transition-colors">
+            INSTAGRAM ↗
           </a>
           <a href="https://www.mahastrategies.com/contact" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-400 transition-colors">
             CONTACT ↗
