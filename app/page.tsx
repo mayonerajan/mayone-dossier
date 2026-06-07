@@ -81,19 +81,27 @@ export default function PersonalDossier() {
 
       {/* HEADER / IDENTITY */}
       <header className="space-y-6 pt-12">
-        <div className="flex justify-between items-center border-b border-gray-800 pb-4">
-          <div className="font-mono text-xs text-gray-500 tracking-widest uppercase">
-            [ DOSSIER: ACTIVE ]
-          </div>
-          <a 
-            href="https://www.mahastrategies.com/contact" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="font-mono text-xs text-gray-500 hover:text-indigo-400 tracking-widest uppercase transition-colors"
-          >
-            [ SECURE COMMS ↗ ]
-          </a>
-        </div>
+      <div className="flex justify-between items-center border-b border-gray-800 pb-4">
+  <div className="font-mono text-xs text-gray-500 tracking-widest uppercase">
+    [ DOSSIER: ACTIVE ]
+  </div>
+  <div className="flex gap-6">
+    <Link 
+      href="/about" 
+      className="font-mono text-xs text-gray-500 hover:text-indigo-400 tracking-widest uppercase transition-colors"
+    >
+      [ THE TRAJECTORY / ABOUT ]
+    </Link>
+    <a 
+      href="https://www.mahastrategies.com/contact" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="font-mono text-xs text-gray-500 hover:text-indigo-400 tracking-widest uppercase transition-colors"
+    >
+      [ SECURE COMMS ↗ ]
+    </a>
+  </div>
+</div>
         <h1 className="font-sans text-4xl sm:text-5xl font-bold tracking-tight text-white">
           Mayone Maha Rajan
         </h1>
