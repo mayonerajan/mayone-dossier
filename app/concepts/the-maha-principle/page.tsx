@@ -1,9 +1,13 @@
 import Link from 'next/link';
+import SignupForm from './SignupForm'; // colocated client component; posts to /api/subscribe
 
 export const metadata = {
   title: 'The Maha Principle | A Framework for Biological Sovereignty — Mayone Maha Rajan',
   description:
     'The Maha Principle is a four-part framework (Mindfulness, Authenticity, Health, Action) arguing that three modern crises — metabolic, attentional, and relational — share a single root: systems optimised for engagement and growth rather than human flourishing. By Mayone Maha Rajan.',
+  alternates: {
+    canonical: 'https://www.mayonemaharajan.com/concepts/the-maha-principle',
+  },
 };
 
 // Canonical identifiers — referenced across the site so crawlers and AI
@@ -240,6 +244,21 @@ export default function MahaPrinciplePage() {
               a settled doctrine, and includes a published set of conditions under which its core
               claims should be revised.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-16 pt-10 border-t border-gray-800">
+        <div className="max-w-xl mx-auto text-center space-y-4">
+          <h2 className="font-sans text-2xl font-bold tracking-tight text-white">
+            Read the book as it&rsquo;s written
+          </h2>
+          <p className="font-serif text-gray-400 leading-relaxed">
+            <em>The Maha Principle: Reclaiming Biological Sovereignty</em> is being released in stages.
+            Get the introduction and new chapters as they&rsquo;re published &mdash; no noise, just the work.
+          </p>
+          <div className="pt-2">
+            <SignupForm />
           </div>
         </div>
       </section>
