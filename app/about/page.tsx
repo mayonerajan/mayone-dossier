@@ -46,7 +46,7 @@ export default function AboutPage() {
           Mayone Maha Rajan — Architect of Biological Sovereignty
         </h1>
         <p className="font-serif text-lg leading-relaxed text-gray-300">
-          My work is anchored in a singular objective: **reclaiming individual autonomy from system-level entropy**. 
+          My work is anchored in a singular objective: reclaiming individual autonomy from system-level entropy. 
         </p>
         <p className="font-serif text-lg leading-relaxed text-gray-400">
           Whether organizing low-frequency transients on an 8-string multi-scale instrument, mapping mobile supply chains years ahead of market shifts, or deploying local-first digital infrastructure via <a href="https://maha-os.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 border-b border-gray-700 hover:border-indigo-400 hover:text-indigo-400 transition-colors">Maha OS</a>, every vector of my career is an application of a unified framework. I view the human organism not as a product to be monetized by algorithmic platforms, but as a sovereign metabolic container that must be actively defended.
