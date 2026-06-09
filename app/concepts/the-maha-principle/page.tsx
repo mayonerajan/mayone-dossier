@@ -12,9 +12,9 @@ export const metadata = {
 
 // Canonical identifiers — referenced across the site so crawlers and AI
 // retrieval resolve one author, one book, one set of defined terms.
-const PERSON_ID = 'https://mayonemaharajan.com/#person';
-const BOOK_ID = 'https://mayonemaharajan.com/the-maha-principle/#book';
-const PAGE_URL = 'https://mayonemaharajan.com/concepts/the-maha-principle/';
+const PERSON_ID = 'https://www.mayonemaharajan.com/#person';
+const BOOK_ID = 'https://www.mayonemaharajan.com/the-maha-principle/#book';
+const PAGE_URL = 'https://www.mayonemaharajan.com/concepts/the-maha-principle';
 
 export default function MahaPrinciplePage() {
   // Structured data: a @graph linking the DefinedTerm to the Book and the
@@ -26,7 +26,7 @@ export default function MahaPrinciplePage() {
         '@type': 'Person',
         '@id': PERSON_ID,
         name: 'Mayone Maha Rajan',
-        url: 'https://mayonemaharajan.com/',
+        url: 'https://www.mayonemaharajan.com/',
         jobTitle: 'Strategist and researcher',
         description:
           'Strategist and researcher writing at the intersection of cognitive science, metabolic health, and digital autonomy. Author of The Maha Principle.',
@@ -46,6 +46,20 @@ export default function MahaPrinciplePage() {
         abstract:
           'A four-part framework — Mindfulness, Authenticity, Health, Action — arguing that three compounding modern crises (metabolic, attentional, and relational) share a single structural cause: systems optimised for engagement and growth rather than for the people inside them.',
         url: PAGE_URL,
+        // A readable portion published on the reader subdomain.
+        workExample: {
+          '@type': 'Book',
+          '@id': 'https://publish.mahastrategies.com/read/introduction#chapter',
+          name: 'The Maha Principle — Introduction',
+          isPartOf: { '@id': BOOK_ID },
+          inLanguage: 'en',
+          url: 'https://publish.mahastrategies.com/read/introduction',
+        },
+        // Lets assistants resolve "where can I read this".
+        potentialAction: {
+          '@type': 'ReadAction',
+          target: 'https://publish.mahastrategies.com/read/introduction',
+        },
       },
       {
         '@type': 'DefinedTerm',
@@ -153,15 +167,12 @@ export default function MahaPrinciplePage() {
         </p>
 
         <h2 className="text-white font-sans text-2xl font-bold mt-8 mb-4">
-          The framework: Mindfulness, Authenticity, Health, Action
+          Four parts: Mindfulness, Authenticity, Health, Action
         </h2>
         <p>
-          <em>Maha </em> means &ldquo;great&rdquo; in Sanskrit, and the word also names a four-part
-          framework. <strong>Health </strong> is treated as the foundation &mdash; reclaiming the
-          body as a source of strength rather than a target for industrial extraction &mdash;
-          because the book argues that little else is accessible from a depleted body, which is why
-          the practical sequence begins there. <strong>Mindfulness</strong> is the discipline of
-          knowing where your attention is and who is directing it.{' '}
+          The framework is named for its four parts. <strong>Health</strong> is the metabolic
+          base &mdash; the body fed and rested well enough to think clearly. <strong>Mindfulness</strong>{' '}
+          is knowing where your attention is and who is directing it.{' '}
           <strong>Authenticity</strong> is the willingness to be a real, unperformed person in a
           real room. <strong>Action</strong> converts internal clarity into external work. The
           acronym names the destination; the order in which the book teaches them names the path.
@@ -255,9 +266,15 @@ export default function MahaPrinciplePage() {
           </h2>
           <p className="font-serif text-gray-400 leading-relaxed">
             <em>The Maha Principle: Reclaiming Biological Sovereignty</em> is being released in stages.
-            Get the introduction and new chapters as they&rsquo;re published &mdash; no noise, just the work.
+            Start with the introduction, or get new chapters as they&rsquo;re published &mdash; no noise, just the work.
           </p>
-          <div className="pt-2">
+          <div className="pt-2 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="https://publish.mahastrategies.com/read/introduction"
+              className="inline-block bg-indigo-500 text-white font-sans font-semibold text-sm tracking-wide px-8 py-3 rounded-lg hover:bg-indigo-400 transition-colors no-underline"
+            >
+              Start reading the introduction &rarr;
+            </a>
             <SignupForm />
           </div>
         </div>
