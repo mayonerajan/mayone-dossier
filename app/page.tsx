@@ -210,7 +210,7 @@ export default function PersonalDossier() {
           </p>
           <div className="border-l-2 border-indigo-500/60 pl-4 py-1">
             <p className="font-serif text-lg leading-relaxed text-gray-300">
-              The lesson of that erasure is the founding constraint of everything since: <strong className="text-white">signal published without sovereign infrastructure does not survive.</strong> Every system I architect now, from Maha OS to this dossier, exists so the record never again depends on anyone&apos;s permission to persist.
+              The lesson of that erasure is the founding constraint of everything since: <strong className="text-white">signal published without sovereign infrastructure does not survive.</strong>  Every system I architect now, from Maha OS to this dossier, exists so the record never again depends on anyone&apos;s permission to persist.
             </p>
           </div>
         </div>
@@ -223,7 +223,7 @@ export default function PersonalDossier() {
         </h2>
         <div className="pl-4 border-l-2 border-transparent space-y-4">
           <p className="font-serif text-lg leading-relaxed text-gray-400">
-            The operational framework for this philosophy is formalized in my 81,000-word non-fiction manuscript, <strong>The Maha Principle: Reclaiming Biological Sovereignty</strong>. It is a rigid, systematic approach to reclaiming the metabolic container and architecting resilience in a high-noise, low-signal environment.
+            The operational framework for this philosophy is formalized in my 82,000-word non-fiction manuscript, <strong>The Maha Principle: Reclaiming Biological Sovereignty</strong>. It is a rigid, systematic approach to reclaiming the metabolic container and architecting resilience in a high-noise, low-signal environment.
           </p>
           <div className="pt-2">
             <a href="https://publish.mahastrategies.com" target="_blank" rel="noopener noreferrer" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center text-gray-200">
