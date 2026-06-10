@@ -14,6 +14,14 @@ export default function PersonalDossier() {
     '@context': 'https://schema.org',
     '@graph': [
       {
+        '@type': 'ProfilePage',
+        '@id': `${SITE_URL}/#webpage`,
+        url: SITE_URL,
+        name: 'Mayone Maha Rajan | Personal Dossier',
+        mainEntity: { '@id': `${SITE_URL}/#person` },
+        inLanguage: 'en',
+      },
+      {
         '@type': 'Person',
         '@id': `${SITE_URL}/#person`,
         name: 'Mayone Maha Rajan',
@@ -24,6 +32,7 @@ export default function PersonalDossier() {
         alumniOf: {
           '@type': 'CollegeOrUniversity',
           name: 'University of California, San Diego',
+          url: 'https://ucsd.edu',
         },
         worksFor: {
           '@type': 'Organization',
@@ -52,11 +61,13 @@ export default function PersonalDossier() {
       {
         '@type': 'Book',
         '@id': `${SITE_URL}/#book`,
-        name: 'The Maha Principle: Architecting Personal and National Renewal',
+        name: 'The Maha Principle: Reclaiming Biological Sovereignty',
         author: { '@id': `${SITE_URL}/#person` },
         abstract:
           'A systematic non-fiction framework for reclaiming biological sovereignty and building resilience in a high-noise environment.',
         inLanguage: 'en',
+        genre: 'Nonfiction',
+        url: 'https://publish.mahastrategies.com',
       },
       {
         '@type': 'SoftwareApplication',
@@ -182,32 +193,26 @@ export default function PersonalDossier() {
         </div>
       </section>
 
-      {/* STRATEGIC INCUBATION & HARDWARE FORESIGHT */}
+      {/* THE ORIGIN TRANSMISSION */}
       <section className="space-y-4">
         <h2 className="font-sans text-sm font-semibold tracking-widest uppercase text-white border-l-2 border-indigo-500 pl-4">
-          IV. Strategic Incubation & Hardware Foresight
+          IV. The Origin Transmission
         </h2>
         <div className="pl-4 border-l-2 border-transparent space-y-6">
           <p className="font-serif text-lg leading-relaxed text-gray-400">
-            My theoretical frameworks regarding digital sovereignty are rooted in early strategic architectures I devised for the mobile hardware sector. Years prior to the market saturation of modern consumer electronics, I engineered foundational doctrines for alternative mobile ecosystems—strategies that paralleled and predated the disruptive trajectories of brands like <strong>OnePlus</strong>.
+            The doctrine began before the companies did. As a teenager in the early 2010s, I was sketching challenger-brand architecture for the mobile hardware sector — community-first launch models, zero-compromise spec doctrine, brand identity built on refusing hardware complacency — in the most fragile venue imaginable: YouTube comment sections, under a throwaway handle.
           </p>
-          
-          <ul className="space-y-4 border-l border-gray-800 pl-4">
-            <li className="relative">
-              <span className="absolute -left-[21px] top-2 h-2 w-2 rounded-full bg-indigo-500"></span>
-              <h3 className="text-white font-sans font-bold text-sm uppercase tracking-wide">Pre-Incorporation Market Strategy</h3>
-              <p className="text-sm text-gray-400 font-serif mt-1">
-                Conceptualized end-to-end strategic models for challenger phone companies, focusing on disrupting established hardware monopolies through aggressive community alignment and zero-compromise execution paradigms.
-              </p>
-            </li>
-            <li className="relative">
-              <span className="absolute -left-[21px] top-2 h-2 w-2 rounded-full bg-indigo-500"></span>
-              <h3 className="text-white font-sans font-bold text-sm uppercase tracking-wide">The "Never Settle" Ethos</h3>
-              <p className="text-sm text-gray-400 font-serif mt-1">
-                Authored underlying brand identities and operational mandates that rejected hardware complacency. This intellectual groundwork explored how a high-fidelity, user-centric doctrine could force a structural shift in the global mobile supply chain.
-              </p>
-            </li>
-          </ul>
+          <p className="font-serif text-lg leading-relaxed text-gray-400">
+            Among that thinking was a two-word operating mandate I wrote under and broadcast freely: <strong className="text-white">never settle</strong>. I published it wanting it to be used — doctrine hoarded is doctrine wasted. When <strong>OnePlus</strong> rose beneath the same banner in 2013, I watched the model I had been sketching prove itself at global scale. Echo or convergence, I got the outcome I wanted.
+          </p>
+          <p className="font-serif text-lg leading-relaxed text-gray-400">
+            What I lost was only the record. The criticism that arrived was sharp enough that, at eighteen, I deleted the account and erased it by my own hand.
+          </p>
+          <div className="border-l-2 border-indigo-500/60 pl-4 py-1">
+            <p className="font-serif text-lg leading-relaxed text-gray-300">
+              The lesson of that erasure is the founding constraint of everything since: <strong className="text-white">signal published without sovereign infrastructure does not survive.</strong> Every system I architect now, from Maha OS to this dossier, exists so the record never again depends on anyone&apos;s permission to persist.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -218,7 +223,7 @@ export default function PersonalDossier() {
         </h2>
         <div className="pl-4 border-l-2 border-transparent space-y-4">
           <p className="font-serif text-lg leading-relaxed text-gray-400">
-            The operational framework for this philosophy is formalized in my 80,000-word non-fiction manuscript, <strong>The Maha Principle: Architecting Personal and National Renewal</strong>. It is a rigid, systematic approach to reclaiming the metabolic container and architecting resilience in a high-noise, low-signal environment.
+            The operational framework for this philosophy is formalized in my 81,000-word non-fiction manuscript, <strong>The Maha Principle: Reclaiming Biological Sovereignty</strong>. It is a rigid, systematic approach to reclaiming the metabolic container and architecting resilience in a high-noise, low-signal environment.
           </p>
           <div className="pt-2">
             <a href="https://publish.mahastrategies.com" target="_blank" rel="noopener noreferrer" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center text-gray-200">
