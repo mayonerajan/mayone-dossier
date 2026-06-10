@@ -5,6 +5,8 @@ import JoinForm from './JoinForm';
 export const metadata = {
   title: 'Mayone Maha Rajan | Personal Dossier',
   description: 'Mayone Maha Rajan is a cultural strategist, author, and technology founder architecting the Maha Principle for biological sovereignty and defense against algorithmic capture at the intersection of cognitive science, applied cybernetics, and agentic systems.',
+  alternates: { canonical: '/' },
+  openGraph: { url: '/' },
 };
 
 export default function PersonalDossier() {
@@ -200,7 +202,7 @@ export default function PersonalDossier() {
         </h2>
         <div className="pl-4 border-l-2 border-transparent space-y-6">
           <p className="font-serif text-lg leading-relaxed text-gray-400">
-            The doctrine began before the companies did. As a teenager in the early 2010s, I was sketching challenger-brand architecture for the mobile hardware sector — community-first launch models, zero-compromise spec doctrine, brand identity built on refusing hardware complacency — in the most fragile venue imaginable: YouTube video descriptions, under a throwaway handle.
+            The doctrine began before the companies did. As a teenager in the early 2010s, I was sketching challenger-brand architecture for the mobile hardware sector — community-first launch models, zero-compromise spec doctrine, brand identity built on refusing hardware complacency — in the most fragile venue imaginable: YouTube comment sections, under a throwaway handle.
           </p>
           <p className="font-serif text-lg leading-relaxed text-gray-400">
             Among that thinking was a two-word operating mandate I wrote under and broadcast freely: <strong className="text-white">never settle</strong>. I published it wanting it to be used — doctrine hoarded is doctrine wasted. When <strong>OnePlus</strong> rose beneath the same banner in 2013, I watched the model I had been sketching prove itself at global scale. Echo or convergence, I got the outcome I wanted.
@@ -210,7 +212,7 @@ export default function PersonalDossier() {
           </p>
           <div className="border-l-2 border-indigo-500/60 pl-4 py-1">
             <p className="font-serif text-lg leading-relaxed text-gray-300">
-              The lesson of that erasure is the founding constraint of everything since: <strong className="text-white">signal published without sovereign infrastructure does not survive.</strong>  Every system I architect now, from Maha OS to this dossier, exists so the record never again depends on anyone&apos;s permission to persist.
+              The lesson of that erasure is the founding constraint of everything since: <strong className="text-white">signal published without sovereign infrastructure does not survive.</strong> Every system I architect now, from Maha OS to this dossier, exists so the record never again depends on anyone&apos;s permission to persist.
             </p>
           </div>
         </div>
@@ -223,7 +225,7 @@ export default function PersonalDossier() {
         </h2>
         <div className="pl-4 border-l-2 border-transparent space-y-4">
           <p className="font-serif text-lg leading-relaxed text-gray-400">
-            The operational framework for this philosophy is formalized in my 82,000-word non-fiction manuscript, <strong>The Maha Principle: Reclaiming Biological Sovereignty</strong>. It is a rigid, systematic approach to reclaiming the metabolic container and architecting resilience in a high-noise, low-signal environment.
+            The operational framework for this philosophy is formalized in my 81,000-word non-fiction manuscript, <strong>The Maha Principle: Reclaiming Biological Sovereignty</strong>. It is a rigid, systematic approach to reclaiming the metabolic container and architecting resilience in a high-noise, low-signal environment.
           </p>
           <div className="pt-2">
             <a href="https://publish.mahastrategies.com" target="_blank" rel="noopener noreferrer" className="inline-block px-4 py-2 border border-gray-700 hover:border-gray-400 text-sm font-mono transition-colors text-center text-gray-200">
