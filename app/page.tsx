@@ -200,7 +200,7 @@ export default function PersonalDossier() {
         </h2>
         <div className="pl-4 border-l-2 border-transparent space-y-6">
           <p className="font-serif text-lg leading-relaxed text-gray-400">
-            The doctrine began before the companies did. As a teenager in the early 2010s, I was sketching challenger-brand architecture for the mobile hardware sector — community-first launch models, zero-compromise spec doctrine, brand identity built on refusing hardware complacency — in the most fragile venue imaginable: YouTube comment sections, under a throwaway handle.
+            The doctrine began before the companies did. As a teenager in the early 2010s, I was sketching challenger-brand architecture for the mobile hardware sector — community-first launch models, zero-compromise spec doctrine, brand identity built on refusing hardware complacency — in the most fragile venue imaginable: YouTube video descriptions, under a throwaway handle.
           </p>
           <p className="font-serif text-lg leading-relaxed text-gray-400">
             Among that thinking was a two-word operating mandate I wrote under and broadcast freely: <strong className="text-white">never settle</strong>. I published it wanting it to be used — doctrine hoarded is doctrine wasted. When <strong>OnePlus</strong> rose beneath the same banner in 2013, I watched the model I had been sketching prove itself at global scale. Echo or convergence, I got the outcome I wanted.
