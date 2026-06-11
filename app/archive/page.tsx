@@ -5,6 +5,8 @@ import SignupForm from './SignupForm'; // colocated copy; posts to the same /api
 export const metadata = {
   title: 'Kinetic Archives & Field Demonstrations | Mayone Maha Rajan',
   description: 'Declassified archival footage and kinetic demonstrations establishing the origin points of The Maha Principle.',
+  alternates: { canonical: '/archive' },
+  openGraph: { url: '/archive', type: 'article' },
 };
 
 // 1. The Archival Database
@@ -53,22 +55,28 @@ const fieldDemonstrations = [
 
 export default function KineticArchivesNode() {
 // 2. Dynamic Schema Generator
+// Real upload dates from YouTube (videos live on the artist's channel, not ours).
+// Claiming a 2026 uploadDate or sole "creator" contradicts YouTube's own metadata
+// and gets the markup flagged as inconsistent. Truthful markup: contributor roles.
+const uploadDates: Record<string, string> = {
+  "2xdlnl4kZjA": "2017-06-09T00:00:00Z",
+  "JV02Itd7yTU": "2015-11-24T00:00:00Z",
+  "baoMMspcTgs": "2016-07-15T00:00:00Z",
+};
+
 const generateVideoSchemas = () => {
   return fieldDemonstrations.map((demo) => ({
     "@context": "https://schema.org",
     "@type": "VideoObject",
     "name": `${demo.chapter}: ${demo.title} (${demo.track})`,
     "description": demo.description,
-    // FIXED: Added missing '$' for string interpolation
-    "thumbnailUrl": `https://img.youtube.com/vi/${demo.youtubeId}/maxresdefault.jpg`, 
-    // FIXED: Added complete ISO 8601 time and timezone designator (Z)
-    "uploadDate": "2026-06-01T00:00:00Z", 
-    // FIXED: Added missing '$' for string interpolation
-    "embedUrl": `https://www.youtube.com/embed/${demo.youtubeId}`, 
-    "creator": {
-      "@type": "Person",
-      "name": "Mayone Maha Rajan"
-    }
+    "thumbnailUrl": `https://img.youtube.com/vi/${demo.youtubeId}/maxresdefault.jpg`,
+    ...(uploadDates[demo.youtubeId] ? { uploadDate: uploadDates[demo.youtubeId] } : {}),
+    "embedUrl": `https://www.youtube.com/embed/${demo.youtubeId}`,
+    "contributor": [
+      { "@type": "Person", "@id": "https://www.mayonemaharajan.com/#person", "name": "Mayone Maha Rajan" },
+      { "@type": "Person", "name": "Adel Rouhnavaz" }
+    ]
   }));
 };
 
