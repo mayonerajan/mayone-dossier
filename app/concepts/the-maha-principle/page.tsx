@@ -34,7 +34,7 @@ export default function MahaPrinciplePage() {
       {
         '@type': 'Book',
         '@id': BOOK_ID,
-        name: 'The Maha Principle: Reclaiming Biological Sovereignty',
+        name: 'The Maha Principle: The Architecture of Human Flourishing',
         author: { '@id': PERSON_ID },
         inLanguage: 'en',
         about: [
