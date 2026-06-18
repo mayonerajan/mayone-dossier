@@ -2,7 +2,7 @@ import Link from 'next/link';
 import SignupForm from './SignupForm'; // colocated client component; posts to /api/subscribe
 
 export const metadata = {
-  title: 'The Maha Principle | A Framework for Biological Sovereignty — Mayone Maha Rajan',
+  title: 'The Maha Principle | The Architecture of Human Flourishing — Mayone Maha Rajan',
   description:
     'The Maha Principle is a four-part framework (Mindfulness, Authenticity, Health, Action) arguing that three modern crises — metabolic, attentional, and relational — share a single root: systems optimised for engagement and growth rather than human flourishing. By Mayone Maha Rajan.',
   alternates: {
@@ -126,7 +126,7 @@ export default function MahaPrinciplePage() {
         </p>
         <p className="font-mono text-xs text-gray-500 tracking-wide">
           A concept from the book{' '}
-          <em className="text-gray-400">The Maha Principle: Reclaiming Biological Sovereignty</em>{' '}
+          <em className="text-gray-400">The Maha Principle: The Architecture of Human Flourishing</em>{' '}
           by Mayone Maha Rajan.
         </p>
       </header>
@@ -251,7 +251,7 @@ export default function MahaPrinciplePage() {
             Read the book as it&rsquo;s written
           </h2>
           <p className="font-serif text-gray-400 leading-relaxed">
-            <em>The Maha Principle: Reclaiming Biological Sovereignty</em> is being released in stages.
+            <em>The Maha Principle: The Architecture of Human Flourishing</em> is being released in stages.
             Get new chapters as they&rsquo;re published &mdash; no noise, just the work.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row gap-4 justify-center items-center">
