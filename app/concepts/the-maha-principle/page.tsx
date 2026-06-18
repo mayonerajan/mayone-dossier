@@ -46,20 +46,6 @@ export default function MahaPrinciplePage() {
         abstract:
           'A four-part framework — Mindfulness, Authenticity, Health, Action — arguing that three compounding modern crises (metabolic, attentional, and relational) share a single structural cause: systems optimised for engagement and growth rather than for the people inside them.',
         url: PAGE_URL,
-        // A readable portion published on the reader subdomain.
-        workExample: {
-          '@type': 'Book',
-          '@id': 'https://publish.mahastrategies.com/read/introduction#chapter',
-          name: 'The Maha Principle — Introduction',
-          isPartOf: { '@id': BOOK_ID },
-          inLanguage: 'en',
-          url: 'https://publish.mahastrategies.com/read/introduction',
-        },
-        // Lets assistants resolve "where can I read this".
-        potentialAction: {
-          '@type': 'ReadAction',
-          target: 'https://publish.mahastrategies.com/read/introduction',
-        },
       },
       {
         '@type': 'DefinedTerm',
@@ -266,15 +252,9 @@ export default function MahaPrinciplePage() {
           </h2>
           <p className="font-serif text-gray-400 leading-relaxed">
             <em>The Maha Principle: Reclaiming Biological Sovereignty</em> is being released in stages.
-            Start with the introduction, or get new chapters as they&rsquo;re published &mdash; no noise, just the work.
+            Get new chapters as they&rsquo;re published &mdash; no noise, just the work.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="https://publish.mahastrategies.com/read/introduction"
-              className="inline-block bg-indigo-500 text-white font-sans font-semibold text-sm tracking-wide px-8 py-3 rounded-lg hover:bg-indigo-400 transition-colors no-underline"
-            >
-              Start reading the introduction &rarr;
-            </a>
             <SignupForm />
           </div>
         </div>
