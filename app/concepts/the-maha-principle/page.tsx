@@ -133,7 +133,7 @@ export default function MahaPrinciplePage() {
 
       <article className="prose prose-invert prose-lg font-serif text-gray-300 max-w-none space-y-6">
         <p>
-          <strong>The Maha Principle</strong> is the central argument of the book of the same
+          <strong>The Maha Principle </strong> is the central argument of the book of the same
           name. It holds that three of the most visible problems of modern life &mdash; declining
           metabolic health, fragmented attention, and the erosion of close community &mdash; are
           not separate crises. They compound one another, and they share a common structural
