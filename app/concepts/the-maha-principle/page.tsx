@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import SignupForm from './SignupForm'; // colocated client component; posts to /api/subscribe
+// SignupForm is no longer the primary CTA (replaced by the pre-order link).
+// Re-enable this import if you add <SignupForm /> back as a secondary email capture.
+// import SignupForm from './SignupForm'; // colocated client component; posts to /api/subscribe
 
 export const metadata = {
   title: 'The Maha Principle | The Architecture of Human Flourishing — Mayone Maha Rajan',
@@ -15,6 +17,11 @@ export const metadata = {
 const PERSON_ID = 'https://www.mayonemaharajan.com/#person';
 const BOOK_ID = 'https://www.mayonemaharajan.com/the-maha-principle/#book';
 const PAGE_URL = 'https://www.mayonemaharajan.com/concepts/the-maha-principle';
+// Commercial home for the book — the conversion/pre-order site. This concept
+// page DEFINES the idea; themahaprinciple.com SELLS the book. They are linked
+// via sameAs below so crawlers resolve them as one entity, two roles.
+const BOOK_SITE = 'https://themahaprinciple.com/';
+const AMAZON_URL = 'https://www.amazon.com/dp/B0H62WLMT5';
 
 export default function MahaPrinciplePage() {
   // Structured data: a @graph linking the DefinedTerm to the Book and the
@@ -27,6 +34,13 @@ export default function MahaPrinciplePage() {
         '@id': PERSON_ID,
         name: 'Mayone Maha Rajan',
         url: 'https://www.mayonemaharajan.com/',
+        // sameAs ties this author identity to the book's commercial home, so
+        // crawlers + LLMs resolve one person across both sites.
+        sameAs: [BOOK_SITE],
+        // ⚠️ RECONCILE: this description says "Strategist and researcher" with a
+        // brand-strategy origin. themahaprinciple.com + the Amazon bio lead with
+        // "cognitive science, UC San Diego." Pick the accurate version and make
+        // all three sources match — conflicting bios weaken the entity signal.
         jobTitle: 'Strategist and researcher',
         description:
           'Strategist and researcher writing at the intersection of cognitive science, metabolic health, and digital autonomy. Author of The Maha Principle.',
@@ -37,6 +51,8 @@ export default function MahaPrinciplePage() {
         name: 'The Maha Principle: The Architecture of Human Flourishing',
         author: { '@id': PERSON_ID },
         inLanguage: 'en',
+        // Links the concept-page Book node to the commercial site + retail listing.
+        sameAs: [BOOK_SITE],
         about: [
           'Biological sovereignty',
           'Attention',
@@ -46,6 +62,12 @@ export default function MahaPrinciplePage() {
         abstract:
           'A four-part framework — Mindfulness, Authenticity, Health, Action — arguing that three compounding modern crises (metabolic, attentional, and relational) share a single structural cause: systems optimised for engagement and growth rather than for the people inside them.',
         url: PAGE_URL,
+        offers: {
+          '@type': 'Offer',
+          availability: 'https://schema.org/PreOrder',
+          availabilityStarts: '2026-07-10',
+          url: AMAZON_URL,
+        },
       },
       {
         '@type': 'DefinedTerm',
@@ -127,7 +149,10 @@ export default function MahaPrinciplePage() {
         <p className="font-mono text-xs text-gray-500 tracking-wide">
           A concept from the book{' '}
           <em className="text-gray-400">The Maha Principle: The Architecture of Human Flourishing</em>{' '}
-          by Mayone Maha Rajan.
+          by Mayone Maha Rajan.{' '}
+          <a href={BOOK_SITE} className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">
+            Pre-order &rarr;
+          </a>
         </p>
       </header>
 
@@ -248,15 +273,22 @@ export default function MahaPrinciplePage() {
       <section className="mt-16 pt-10 border-t border-gray-800">
         <div className="max-w-xl mx-auto text-center space-y-4">
           <h2 className="font-sans text-2xl font-bold tracking-tight text-white">
-            Read the book as it&rsquo;s written
+            Read the book
           </h2>
           <p className="font-serif text-gray-400 leading-relaxed">
-            <em>The Maha Principle: The Architecture of Human Flourishing</em> is being released in stages.
-            Get new chapters as they&rsquo;re published &mdash; no noise, just the work.
+            <em>The Maha Principle: The Architecture of Human Flourishing</em> is
+            available to pre-order now and releases July&nbsp;10,&nbsp;2026.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <SignupForm />
+            <a
+              href={BOOK_SITE}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-indigo-500 text-white font-sans font-semibold hover:bg-indigo-400 transition-colors"
+            >
+              Pre-order at themahaprinciple.com &rarr;
+            </a>
           </div>
+          {/* If you still want to collect emails, keep <SignupForm /> below this
+              as a secondary option — but the primary CTA is now the pre-order. */}
         </div>
       </section>
 
