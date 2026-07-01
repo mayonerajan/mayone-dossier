@@ -29,21 +29,24 @@ export default function MahaPrinciplePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      {
+            {
         '@type': 'Person',
         '@id': PERSON_ID,
         name: 'Mayone Maha Rajan',
         url: 'https://www.mayonemaharajan.com/',
-        // sameAs ties this author identity to the book's commercial home, so
-        // crawlers + LLMs resolve one person across both sites.
-        sameAs: [BOOK_SITE],
-        // ⚠️ RECONCILE: this description says "Strategist and researcher" with a
-        // brand-strategy origin. themahaprinciple.com + the Amazon bio lead with
-        // "cognitive science, UC San Diego." Pick the accurate version and make
-        // all three sources match — conflicting bios weaken the entity signal.
-        jobTitle: 'Strategist and researcher',
-        description:
-          'Strategist and researcher writing at the intersection of cognitive science, metabolic health, and digital autonomy. Author of The Maha Principle.',
+        sameAs: [
+          BOOK_SITE,
+          'https://www.facebook.com/622592662',
+          'https://www.instagram.com/mayon_rajan',
+          'https://themahaprinciple.com/#author'
+        ],
+        jobTitle: 'Cultural strategist, author, and technology founder',
+        description: 'Cultural strategist, author, and technology founder working at the intersection of cognitive science, applied cybernetics, and agentic systems. Trained in Cognitive Science at UC San Diego. Author of The Maha Principle.',
+        alumniOf: {
+          '@type': 'CollegeOrUniversity',
+          name: 'University of California, San Diego'
+        },
+        knowsAbout: ['Cognitive Science', 'Metabolic Health', 'Systems Thinking', 'Biological Sovereignty', 'Digital Autonomy']
       },
       {
         '@type': 'Book',
@@ -52,7 +55,7 @@ export default function MahaPrinciplePage() {
         author: { '@id': PERSON_ID },
         inLanguage: 'en',
         // Links the concept-page Book node to the commercial site + retail listing.
-        sameAs: [BOOK_SITE],
+        sameAs: [BOOK_SITE, AMAZON_URL],
         about: [
           'Biological sovereignty',
           'Attention',
@@ -117,7 +120,24 @@ export default function MahaPrinciplePage() {
               text: 'The author spent a decade working in cultural and brand strategy connected to the digital economy, then withdrew from that work and relocated to Colombo, Sri Lanka, where he studied the intersection of cognitive science, metabolic health, and the conditions for human flourishing. The book presents itself as a model to be tested, not a settled doctrine, and includes a published set of conditions under which its core claims should be revised.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'Is The Maha Principle a religious or spiritual teaching?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. The name uses the Sanskrit word maha meaning great, but the framework is secular and draws on cognitive science and systems thinking. It is not affiliated with Mahayana Buddhism, MahaDharma, or the Hare Krishna maha-mantra, and makes no religious claims.',
+            },
+          },
         ],
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': PAGE_URL + '#breadcrumb',
+        itemListElement: [
+          {'@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.mayonemaharajan.com/'},
+          {'@type': 'ListItem', position: 2, name: 'Concepts', item: 'https://www.mayonemaharajan.com/concepts'},
+          {'@type': 'ListItem', position: 3, name: 'The Maha Principle', item: PAGE_URL}
+        ]
       },
     ],
   };
@@ -266,7 +286,15 @@ export default function MahaPrinciplePage() {
               a settled doctrine, and includes a published set of conditions under which its core
               claims should be revised.
             </p>
+                    <div>
+            <h3 className="font-sans font-semibold text-lg text-indigo-400 mb-2">
+              Is The Maha Principle a religious or spiritual teaching?
+            </h3>
+            <p className="font-serif text-gray-400 leading-relaxed">
+              No. The name uses the Sanskrit word maha meaning great, but the framework is secular and draws on cognitive science and systems thinking. It is not affiliated with Mahayana Buddhism, MahaDharma, or the Hare Krishna maha-mantra, and makes no religious claims.
+            </p>
           </div>
+        </div>
         </div>
       </section>
 
