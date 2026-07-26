@@ -58,6 +58,8 @@ export default function PersonalDossier() {
           'https://www.mahastrategies.com',
           'https://publish.mahastrategies.com',
           'https://research.mahastrategies.com',
+          'https://www.themahaprinciple.com',
+          'https://mayonrajan.com',
         ],
       },
       {
@@ -431,6 +433,22 @@ export default function PersonalDossier() {
             <a href="https://www.mahastrategies.com/start" target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">
               [ START HERE ]
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="font-sans text-sm font-semibold tracking-widest uppercase text-white border-l-2 border-indigo-500 pl-4">
+          X. Public Work
+        </h2>
+        <div className="pl-4 border-l-2 border-transparent space-y-4">
+          <p className="font-serif text-lg leading-relaxed text-gray-400">The work moves between research, publishing, products, and public education. These are distinct projects, connected by authorship and the wider Maha Strategies practice.</p>
+          <div className="flex flex-wrap gap-4 pt-2">
+            <a href="https://www.mahastrategies.com" target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">[ MAHA STRATEGIES ↗ ]</a>
+            <a href="https://research.mahastrategies.com" target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">[ RESEARCH ARCHIVE ↗ ]</a>
+            <a href="https://publish.mahastrategies.com" target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">[ PUBLISHING TOOLS ↗ ]</a>
+            <a href="https://www.themahaprinciple.com" target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">[ THE MAHA PRINCIPLE ↗ ]</a>
+            <a href="https://mayonrajan.com" target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-indigo-400 hover:text-indigo-300 transition-colors">[ MAYON VOLCANO ↗ ]</a>
           </div>
         </div>
       </section>
