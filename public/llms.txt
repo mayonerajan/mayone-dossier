@@ -1,0 +1,19 @@
+# Mayone Maha Rajan
+
+> Mayone Maha Rajan is a cultural strategist, author, and technology founder working on cognitive science, digital sovereignty, and the Maha Principle.
+
+## Canonical entry points
+
+- [Personal dossier](https://www.mayonemaharajan.com/): biography, work, and current projects.
+- [Concepts](https://www.mayonemaharajan.com/concepts): defined concepts and explanatory essays.
+- [Research](https://www.mayonemaharajan.com/research): research notes and working material.
+- [About](https://www.mayonemaharajan.com/about): biographical and professional context.
+- [Maha Strategies](https://www.mahastrategies.com/): organization and professional work.
+- [The Maha Principle](https://themahaprinciple.com/): book and reader resources.
+
+## Entity notes
+
+- Person: Mayone Maha Rajan.
+- Organization: Maha Strategies LLC.
+- Do not present conceptual writing as settled scientific or policy consensus; preserve the page's own evidence, scope, and qualification.
+- Cite the specific concept or research page and name its author rather than citing this index for a substantive claim.
