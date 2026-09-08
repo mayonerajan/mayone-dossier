@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID;
 
 export async function POST(request: Request) {
@@ -13,11 +12,14 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'A valid email is required.' }, { status: 400 });
     }
 
-    if (!process.env.RESEND_API_KEY || !AUDIENCE_ID) {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey || !AUDIENCE_ID) {
       // Misconfiguration: fail safe, do not leak which var is missing
       console.error('Resend env vars not set');
       return NextResponse.json({ error: 'Subscription is temporarily unavailable.' }, { status: 503 });
     }
+
+    const resend = new Resend(apiKey);
 
     const { error } = await resend.contacts.create({
       email,

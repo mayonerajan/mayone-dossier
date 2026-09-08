@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { federationSitemapRows } from '@/lib/federation-adapter'
 
 // Canonical host. Must match your canonical tags, robots sitemap URL, and a
 // 301 redirect from the non-www apex. Change to the apex if that is your
@@ -53,5 +54,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticRoutes, ...conceptRoutes, ...researchRoutes]
+  return [...staticRoutes, ...conceptRoutes, ...researchRoutes, ...federationSitemapRows('www.mayonemaharajan.com')]
 }

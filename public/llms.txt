@@ -1,5 +1,8 @@
 # Mayone Maha Rajan
 
+- [Federated evidence pages](https://www.mayonemaharajan.com/federation-llms.txt): exact-revision concept pages released through Maha's governed federation.
+- [Authorial source lineage](https://mayonemaharajan.com/sources-llms.txt): source-bound authorial provenance on the apex host.
+
 > Mayone Maha Rajan is a cultural strategist, author, and technology founder working on cognitive science, digital sovereignty, and the Maha Principle.
 
 ## Canonical entry points

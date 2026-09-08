@@ -3,10 +3,7 @@
 
 import { Resend } from 'resend';
 
-// Assuming you are using the same .env.local setup as Maha Strategies
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-export async function joinNetworkAction(prevState: any, formData: FormData) {
+export async function joinNetworkAction(_prevState: unknown, formData: FormData) {
   const email = formData.get("email") as string;
 
   if (!email) {
@@ -14,6 +11,11 @@ export async function joinNetworkAction(prevState: any, formData: FormData) {
   }
 
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      return { success: false, error: "Transmission service unavailable." };
+    }
+    const resend = new Resend(apiKey);
     await resend.emails.send({
       from: "Acme <onboarding@resend.dev>", // Change to a verified domain later
       to: "mayone@mahastrategies.com",
