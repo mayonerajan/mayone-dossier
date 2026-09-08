@@ -28,6 +28,11 @@ export const ALL_CONCEPTS = [
     blurb: 'The structural capture of human focus by systems engineered to maximise engagement.',
   },
   {
+    slug: 'algorithmic-capture',
+    title: 'Algorithmic Capture',
+    blurb: 'An author-defined frame for how feedback-driven systems can narrow attention and choice.',
+  },
+  {
     slug: 'metabolic-colonialism',
     title: 'Metabolic Colonialism',
     blurb: 'An extractive model in which industrial food systems profit from biological dysfunction.',
